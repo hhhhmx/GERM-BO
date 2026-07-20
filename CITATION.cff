@@ -10,6 +10,18 @@ authors:
     given-names: Jingchao
   - family-names: Shi
     given-names: Yang
+  - family-names: Yang
+    given-names: Miyang
+    affiliation: "Zhongshan School of Medicine, Sun Yat-sen University"
+  - family-names: Wang
+    given-names: Zhaochu
+    affiliation: "Department of Anorectal Surgery, The Affiliated People's Hospital of Fujian University of Traditional Chinese Medicine"
+  - family-names: Chen
+    given-names: Dayou
+    affiliation: "School of Computer Science, Sun Yat-sen University"
+  - family-names: Sun
+    given-names: Xi
+    affiliation: "Zhongshan School of Medicine, Sun Yat-sen University"
 repository-code: "https://github.com/hhhhmx/GERM-BO"
 abstract: "GERM-BO is a border-aware adapter framework for resource-efficient genomic foundation model adaptation. This repository contains code, processed data splits, configuration files, result summaries, manuscript files, and reproduction entry points."
 keywords:
