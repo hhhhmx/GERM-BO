@@ -10,6 +10,7 @@
 \usepackage{helvet}
 \usepackage{authblk}
 \usepackage{hyperref}
+\usepackage{xurl}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -19,6 +20,7 @@
 \bibliographystyle{numbered}
 \usepackage[right]{lineno}
 \linenumbers
+\Urlmuskip=0mu plus 1mu
 
 \newcommand{\splitname}[1]{\textit{#1}}
 \newcommand{\modpath}[1]{\textit{#1}}
@@ -359,6 +361,7 @@ On seeds 50--54, GERM-BO (Q) reaches $0.3888 \pm 0.0233$ test accuracy and $0.35
 \caption{External full comparison on the strict \splitname{3-mer-balanced} splice split.}
 \label{tab:external-ablation}
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lccc}
 \toprule
 Method & Family & Accuracy & Macro-F1 \\
@@ -378,6 +381,7 @@ Baseline LoRA full target set & DNABERT-2 + LoRA & $0.3578 \pm 0.0334$ & $0.2344
 DNABERT-2 frozen linear probe & DNABERT-2 probe & $0.3334 \pm 0.0006$ & $0.1688 \pm 0.0042$ \\
 \bottomrule
 \end{tabular}
+}
 \end{table}
 
 \subsubsection*{Class recovery on the strict splice split}
@@ -434,6 +438,7 @@ Held-out confirmation on seeds 45--49 does not replicate the pilot pattern. Acro
 \label{tab:histone-dnabert-pilots}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{llcccccc}
 \toprule
 Task & Cat. & LoRA (pilot) & GERM-BO (pilot) & $\Delta$ pilot [95\% CI] & LoRA (held-out) & GERM-BO (held-out) & $\Delta$ held-out [95\% CI] \\
@@ -451,6 +456,7 @@ H4ac & histone & 0.6383 & 0.6310 & $-0.0073$ [$-0.0330$, $+0.0120$] & 0.5768 & 0
 enhancers & regulatory & 0.7217 & 0.7292 & $+0.0075$ [$-0.0125$, $+0.0450$] & 0.7395 & 0.7325 & $-0.0070$ [$-0.0150$, $+0.0010$] \\
 \bottomrule
 \end{tabular}
+}
 
 Pilot subset 2000/500/1000 from \texttt{InstaDeepAI/nucleotide\_transformer\_downstream\_tasks}. Test accuracy means over three or five seeds. No held-out task has a bootstrap confidence interval excluding zero.
 \end{table}
@@ -579,6 +585,7 @@ We next ask whether the same transfer holds on the strict \splitname{3-mer-balan
 \label{tab:cross-backbone-splice-label-free}
 \small
 \setlength{\tabcolsep}{4pt}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lcccccc}
 \toprule
 Backbone & LoRA Acc & GERM-BO Acc & LoRA Macro-F1 & GERM-BO Macro-F1 & $\Delta$ Acc [95\% CI] & $\Delta$ F1 [95\% CI] \\
@@ -588,6 +595,7 @@ NT v2 50M & $0.6447 \pm 0.0865$ & $0.6737 \pm 0.0837$ & $0.6393 \pm 0.0859$ & $0
 HyenaDNA tiny & $0.6088 \pm 0.0249$ & $0.6063 \pm 0.0214$ & $0.6031 \pm 0.0277$ & $0.6007 \pm 0.0248$ & $-0.0024$ [$-0.0078$, $+0.0028$] & $-0.0024$ [$-0.0085$, $+0.0036$] \\
 \bottomrule
 \end{tabular}
+}
 
 Train-quantile center-window k-mer JSD metadata, quantile clip $[0.8,1.2]$, $\lambda_{\mathrm{comp}}=0.27$. Bootstrap confidence intervals from paired seed deltas.
 \end{table}
@@ -622,11 +630,14 @@ Requests for further information and resources should be directed to and will be
 This study did not generate new unique reagents.
 
 \subsection*{Data and code availability}
+\begingroup
+\sloppy
 \begin{itemize}
   \item Public raw sequence data used in this study are available from the UCI Molecular Biology Promoter Gene Sequences repository (\url{https://archive.ics.uci.edu/ml/machine-learning-databases/molecular-biology/promoter-gene-sequences/promoters.data}), Genomic Benchmarks \texttt{human\_nontata\_promoters} (version 0; \url{https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks}), Hugging Face Datasets \texttt{simecek/human\_nontata\_promoters} (\url{https://huggingface.co/datasets/simecek/human_nontata_promoters}), and the Nucleotide Transformer downstream task repository \texttt{InstaDeepAI/nucleotide\_transformer\_downstream\_tasks}~\cite{nucleotidetransformer2024} (\url{https://huggingface.co/datasets/InstaDeepAI/nucleotide_transformer_downstream_tasks}). The pretrained DNABERT-2 (117M) backbone is available as \texttt{zhihan1996/DNABERT-2-117M}~\cite{dnabert22023} (\url{https://huggingface.co/zhihan1996/DNABERT-2-117M}).
   \item Reviewer-accessible code and processed data will be provided at submission at \url{https://github.com/hhhhmx/GERM-BO.git}. This repository should include the GERM-BO adapter implementation, training and evaluation entry points, split-preparation scripts, YAML configurations for all reported runs, processed train/validation/test splits for the controlled border-aware tasks and the strict \splitname{3-mer-balanced} splice benchmark, and scripts for regenerating the reported tables and figures.
   \item A permanent public archive with DOI will be created before publication through Zenodo. Until the archive is active, all materials required to reproduce the reported analyses are available at \url{https://github.com/hhhhmx/GERM-BO.git} and from the lead contact upon reasonable request.
 \end{itemize}
+\endgroup
 
 \section*{ACKNOWLEDGMENTS}
 We thank our research group and advisors for helpful discussions and feedback on this manuscript. We gratefully acknowledge the maintainers of the UCI Machine Learning Repository, Genomic Benchmarks, Hugging Face, and the Nucleotide Transformer downstream benchmark collection for publicly releasing the sequence datasets and model checkpoints used in this study. Computational experiments were performed using institutional GPU computing resources.
