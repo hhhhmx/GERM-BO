@@ -90,7 +90,7 @@ The missing methodological ingredient is sequence structure awareness. Genomic t
 This observation exposes a method gap in outlier-free genomic adaptation. Existing work shows that suppressing activation outliers improves average low-rank adaptation and quantization efficiency~\cite{germ2025,lora2022}. It does not specify which genomic directions are most affected by this suppression, how those directions can be estimated from sequence information, or how an adapter should compensate them without increasing the trainable rank. A generic bound on norms or Lipschitz constants would not answer this question because such bounds are typically agnostic to discrete overlap structure in sequences~\cite{bartlett2017spectrally} and do not include the overlap, threshold, and compensation variables that define this setting~\cite{allen2019learning,golowich2018size}.
 As illustrated in Fig.~\ref{fig:motivation}, self-overlapping tokens induce clustered occurrences that give rise to burst-like activations, which are disproportionately suppressed by uniform clipping, leading to substantial loss of task-relevant signals in border-rich directions.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{fig1.pdf}
 \caption{Border-induced burst activations caused by self-overlapping genomic tokens and the limitation of uniform outlier suppression. High-border sequences (e.g., repetitive motifs such as ATATAT) induce clustered occurrences and burst-like neural activations. Uniform clipping suppresses these bursts but disproportionately removes task-relevant signals in border-rich directions. GERM-BO addresses this issue via border-aware low-rank compensation that selectively restores suppressed informative components.}
@@ -156,7 +156,7 @@ Under the scale and independence assumptions above, high-border directions retai
 \end{theorem}
 This motivates border-burst suppression: the same outlier-control mechanism that improves average efficiency can disproportionately reduce information in high-border genomic directions. Full variance calculations, response-channel bounds, and proofs are provided in Document S1; the main text keeps only the quantities needed to specify and evaluate the method.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{fig2_ab.pdf}
 \caption{Token-level border structure and burst modeling in GERM-BO. \textbf{(A)}, Illustration of genomic token overlap and the definition of the border score $\beta_w$. High-border tokens (e.g., repetitive motifs) induce clustered occurrences in sequence space. \textbf{(B)}, Modeling of border-induced activation bursts and their suppression. The retention of task-relevant information, $R_w(\tau)$, decreases monotonically with the border score $\beta_w$ under uniform outlier clipping, revealing the \emph{border-burst suppression} failure mode.}
@@ -184,7 +184,7 @@ Document S1 derives an optimal compensation rule from a local retained-informati
 \end{equation}
 with a single exponent $\alpha>0$ (Fig.~\ref{fig:method_compensation}).
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{fig2_cd.pdf}
 \caption{Border-aware low-rank compensation in GERM-BO. \textbf{(C)}, Framework of the compensation module. The standard low-rank update $\Delta W = BA$ is augmented with a diagonal compensation matrix $\Gamma$, yielding $\Delta W = BA\Gamma$ in the theoretical token-aligned basis. The entries $\gamma_w$ of $\Gamma$ are computed based on the border score $\beta_w$ and the retained information $R_w(\tau)$. \textbf{(D)}, Adaptive allocation of adaptation capacity. Compensation weights $\gamma_w$ increase with $\beta_w$, strategically reallocating the low-rank budget to restore suppressed signals in high-border, information-rich directions.}
@@ -216,7 +216,7 @@ The controlled suite contains \splitname{border\_easy}, \splitname{border\_mediu
 
 Table~\ref{tab:controlled-main} reports the main result on \splitname{hard\_border\_large}. The corresponding visual comparison and performance trends are shown in Fig.~\ref{fig:controlled_main_mechanism}A and Fig.~\ref{fig:controlled_main_mechanism}C, where metadata-driven GERM-BO consistently achieves the strongest performance across metrics and difficulty regimes. We compare the three main methods: LoRA (baseline), GERM-BO (Act) (activation-derived), and GERM-BO (Meta) (metadata-driven). The final setting uses metadata border scores, compensation strength $\lambda_{\mathrm{comp}}=0.27$, and \modpath{attention.output + classifier} as the target module set.
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 \centering
 \caption{Controlled main result on the enlarged \splitname{hard\_border\_large} split. Results are reported over 13 seeds.}
 \label{tab:controlled-main}
@@ -238,7 +238,7 @@ Metadata-driven GERM-BO & 13 & $\mathbf{0.9519 \pm 0.0443}$ & $\mathbf{0.9493 \p
 
 The gain is substantial and stable. Relative to Baseline LoRA, metadata-driven GERM-BO improves accuracy by $+0.1142$ with bootstrap $95\%$ confidence interval $[+0.0703, +0.1593]$ and wins on $92.3\%$ of seeds. Relative to the activation-derived variant, the gain is still clear: $+0.0601$ accuracy with bootstrap $95\%$ confidence interval $[+0.0361, +0.0835]$. This establishes the main controlled claim: when a meaningful border score is available, border-aware compensation produces a strong improvement. The mechanism-level comparison in Fig.~\ref{fig:controlled_main_mechanism}B further shows that the gain is specific to correctly aligned border-aware compensation rather than a generic architectural effect.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{010203.pdf}
 \caption{Controlled border-aware main results and mechanism validation. \textbf{A}, controlled main results on \splitname{hard\_border\_large}, showing test accuracy and F1 for the three main methods: \textbf{LoRA} (baseline), \textbf{GERM-BO (Act)} (activation-derived), and \textbf{GERM-BO (Meta)} (metadata-driven). The metadata-driven variant is the strongest configuration on both metrics. \textbf{B}, mechanism heatmaps on held-out \splitname{border\_medium}, \splitname{border\_hard}, and their combined evaluation, comparing no-compensation, GERM-BO (Act), GERM-BO (Meta), and shuffled-metadata compensation. The GERM-BO (Meta) variant yields the strongest overall performance, while the shuffled condition confirms that the gain is not explained by a trivial metadata channel. \textbf{C}, performance trends across \splitname{border\_easy}, \splitname{border\_medium}, and \splitname{border\_hard}. The easy regime is nearly saturated, whereas the medium regime exhibits larger variance and the hard regime better reveals the advantage of GERM-BO.}
@@ -249,7 +249,7 @@ The gain is substantial and stable. Relative to Baseline LoRA, metadata-driven G
 
 We next test whether the gain is specifically caused by compensation rather than by a generic architectural change. As visualized in Fig.~\ref{fig:controlled_main_mechanism}B, \textbf{GERM-BO (Meta)} consistently outperforms both \textbf{GERM-BO (Act)} and the \textbf{shuffled alternative}. Table~\ref{tab:mechanism-main} reports held-out results on \splitname{border\_medium} and \splitname{border\_hard} combined, using seeds 47--54. We compare no compensation, activation-derived compensation, metadata-driven compensation, and a shuffled-metadata ablation.
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 \centering
 \caption{Mechanism validation on held-out \splitname{border\_medium + border\_hard}.}
 \label{tab:mechanism-main}
@@ -280,7 +280,7 @@ Token-level estimation on the same checkpoints yields cleaner monotone trends be
 
 We also ablate the target modules in the controlled setting. The comparison across module choices is visualized in Fig.~\ref{fig:architecture_external_confirmation}A. The best target-module choice is \modpath{attention.output + classifier} ($0.8932 \pm 0.0399$ accuracy, $0.8935 \pm 0.0369$ F1), followed by \modpath{Wqkv + classifier}. The larger \modpath{Wqkv + attention.output + classifier} setting is weaker. We therefore use \modpath{attention.output + classifier} as the strongest LoRA-style baseline in later experiments.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{0408.pdf}
 \caption{Target-module ablation and external splice confirmation. \textbf{A}, target-module ablation in the controlled setting, visualized as a dumbbell comparison between accuracy and F1 for classifier-only, \modpath{Wqkv + classifier}, \modpath{attention.output + classifier}, and the fuller combined setting. The \modpath{attention.output + classifier} variant provides the strongest operating point. \textbf{B}, pooled confirmation on the strict \splitname{3-mer-balanced} splice split over seeds 50--59. The left panel reports pooled mean accuracy and macro-F1 for LoRA \modpath{attention.output + classifier} and GERM-BO with quantile-normalized compensation, while the right panel reports paired improvements with bootstrap confidence intervals. The macro-F1 gain is the more stable and discriminative signal.}
@@ -295,7 +295,7 @@ We also ablate the target modules in the controlled setting. The comparison acro
 
 Our initial experiments on \splitname{splice\_sites\_all} revealed two issues, as summarized in Fig.~\ref{fig:external_benchmark_overview} and Fig.~\ref{fig:splice_shortcut_and_comparison}. First, the original sequence-estimated score could saturate: a raw clipped estimator based on center-window JSD had clip-max rate $\approx 99.9\%$ and test score standard deviation $\approx 0.0026$, making compensation close to a constant rescaling. Second, the original larger splice split was strongly helped by short-range $3$-mer shortcuts. On that split, $3$-mer Logistic Regression reached macro-F1 $0.4293 \pm 0.0008$ and $3$-mer Linear SVM reached $0.4259 \pm 0.0019$, both stronger than the DNABERT-2-family models.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{05_external_benchmark_overview.pdf}
 \caption{Overview of external pilot and held-out benchmarks. Results are shown for UCI promoter, \splitname{human\_nontata\_promoters}, and \splitname{splice\_sites\_all} datasets, with grouped horizontal comparisons for both accuracy and F1 / macro-F1. The comparison includes baseline LoRA, activation-derived GERM-BO, and metadata-driven GERM-BO variants.}
@@ -306,7 +306,7 @@ Our initial experiments on \splitname{splice\_sites\_all} revealed two issues, a
 
 GC matching alone did not remove this effect. This behavior is illustrated in Fig.~\ref{fig:splice_shortcut_and_comparison}A, where shortcut-based models remain strong under the GC-matched split (GC-match) but degrade under the stricter 3-mer-balanced split (3-mer-bal). By contrast, on the stricter 3-mer-balanced split, the same baselines dropped to $0.4052 \pm 0.0023$ and $0.4128 \pm 0.0026$ macro-F1, respectively. We therefore adopt two changes in the final external protocol: (i) train-quantile normalization for the estimated border score, and (ii) evaluation on the strict \splitname{3-mer-balanced} split. The resulting evaluation protocol and its impact on model comparison are summarized in Fig.~\ref{fig:splice_shortcut_and_comparison}B.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{0607.pdf}
 \caption{Shortcut analysis and strict comparison on the splice benchmark. \textbf{A}, shortcut analysis showing performance of traditional 3-mer models across three data splits: original (Orig), GC-matched (GC-match), and 3-mer-balanced (3-mer-bal). GC matching alone does not substantially weaken the strongest 3-mer models, whereas the strict 3-mer-balanced split reduces shortcut strength more clearly. \textbf{B}, full comparison on the strict 3-mer-balanced split. The left panel ranks methods by macro-F1, while the right panel shows the accuracy--macro-F1 trade-off. Traditional 3-mer models remain strong in absolute score, but within the DNABERT-2 family, quantile-normalized GERM-BO provides the strongest result.}
@@ -321,7 +321,7 @@ Concretely, the final label-free score uses a center-window $k$-mer Jensen--Shan
 
 Table~\ref{tab:external-main} reports the main external result on the strict \splitname{3-mer-balanced} splice split, pooled over seeds 50--59. The pooled comparison and paired improvements are further illustrated in Fig.~\ref{fig:architecture_external_confirmation}B. In the following, we use \textbf{LoRA-ATT} to denote the strongest LoRA baseline (applied to the \modpath{attention.output} and \modpath{classifier} modules), and \textbf{GERM-BO (Q)} to denote our method with quantile-normalized compensation (range $[0.8, 1.2]$, $\lambda_{\mathrm{comp}}=0.27$). We compare the strongest LoRA baseline and the final quantile-normalized GERM-BO configuration.
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 \centering
 \caption{External main result on the strict \splitname{3-mer-balanced} splice split. Results are pooled over 10 random seeds (50--59). Method abbreviations are defined in the main text.}
 \label{tab:external-main}
@@ -356,7 +356,7 @@ To address whether the external gain is specific to metadata-aligned compensatio
 
 On seeds 50--54, GERM-BO (Q) reaches $0.3888 \pm 0.0233$ test accuracy and $0.3580 \pm 0.0545$ macro-F1, remaining the strongest DNABERT-2-family variant on macro-F1. Activation-derived GERM-BO reaches $0.3709 \pm 0.0144$ accuracy and $0.3112 \pm 0.0492$ macro-F1, improving over LoRA-ATT ($0.3489 \pm 0.0081$ accuracy; $0.2405 \pm 0.0145$ macro-F1) and gated LoRA ($0.3606 \pm 0.0254$; $0.2769 \pm 0.0873$) but falling short of the metadata-aligned quantile variant (paired macro-F1 gap $-0.0469$; bootstrap $95\%$ confidence interval $[-0.1170, +0.0311]$). Input-gated LoRA recovers a modest macro-F1 gain over uniform LoRA-ATT ($+0.0364$) yet remains below both compensated GERM-BO variants. These results separate border-aware compensation from generic hidden-state gating: direction reweighting alone is not sufficient to match metadata-aligned GERM-BO on the strict splice split.
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 \centering
 \caption{External full comparison on the strict \splitname{3-mer-balanced} splice split.}
 \label{tab:external-ablation}
@@ -392,14 +392,14 @@ The external gain is not uniform across classes, as illustrated in Fig.~\ref{fig
 
 The LoRA baseline collapses strongly toward class 2, whereas GERM-BO produces a much more balanced prediction distribution. This collapse and its correction by GERM-BO are clearly visualized in Fig.~\ref{fig:why_it_works}A. This class-recovery pattern is important for interpreting the external result: the gain comes primarily from restoring minority or boundary-sensitive classes rather than from trivially increasing confidence on the dominant class. Additional analysis of estimator quality and its relationship to sequence features is provided in Fig.~\ref{fig:why_it_works}B.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.85\linewidth]{0910.pdf}
 \caption{Class recovery and estimator quality on the strict splice split. \textbf{A}, class-wise behavior on pooled seeds 50--59. The left panel compares per-class F1, showing that GERM-BO improves the non-dominant classes more strongly than the dominant class. The right panel shows prediction composition, demonstrating that the LoRA baseline collapses toward the dominant class while GERM-BO produces a more balanced prediction distribution. \textbf{B}, estimator-quality analysis for the strict split. Panel \textbf{B(a)} summarizes the train/validation/test score distributions with box-style quantile ranges and mean markers. Panel \textbf{B(b)} reports correlations between the estimator and simple sequence-composition proxies, indicating that the quantile-normalized estimator is not merely a trivial GC or $3$-mer shortcut. Panel \textbf{B(c)} compares score means for correct and wrong predictions, showing that the estimator is not a strong standalone error detector and is better interpreted as a compensation signal.}
 \label{fig:why_it_works}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 \centering
 \caption{Per-class performance and prediction distribution on the strict splice split (seeds 50--59).}
 \label{tab:class-recovery}
@@ -432,7 +432,7 @@ On pilot seeds 42--44, metadata-estimated GERM-BO shows a positive mean accuracy
 
 Held-out confirmation on seeds 45--49 does not replicate the pilot pattern. Across histone marks, six of ten tasks show a positive mean delta, but no task has a bootstrap confidence interval excluding zero. \splitname{H3K14ac} reverses to near-null ($\Delta=-0.0060$; CI $[-0.0346, +0.0206]$), and \splitname{H4} flips sign ($\Delta=+0.0544$). Only four of eleven tasks show the same sign in pilot and held-out splits.
 
-\begin{table}[p]
+\begin{table}[!htb]
 \centering
 \caption{DNABERT-2 chromatin and regulatory pilots with label-free border metadata (pilot seeds 42--44 vs.\ held-out seeds 45--49).}
 \label{tab:histone-dnabert-pilots}
@@ -463,7 +463,7 @@ Pilot subset 2000/500/1000 from \texttt{InstaDeepAI/nucleotide\_transformer\_dow
 
 We further replicate the same histone pilot protocol on the Nucleotide Transformer v2 50M backbone (seeds 42--44; Table~\ref{tab:histone-nt-pilot}). Metadata-estimated GERM-BO shows a positive mean delta on only three of ten histone marks, with the largest gain on \splitname{H4ac} ($\Delta=+0.0130$; CI $[+0.0080, +0.0180]$) and near-null behavior on \splitname{H3K14ac} ($\Delta=-0.0023$). Sign agreement with DNABERT-2 is limited (four of ten tasks). Taken together, chromatin and regulatory pilots do not establish a robust metadata-estimation advantage outside the boundary-sensitive splice setting.
 
-\begin{table}[p]
+\begin{table}[!htb]
 \centering
 \caption{Nucleotide Transformer v2 50M histone-mark pilot with label-free border metadata (seeds 42--44).}
 \label{tab:histone-nt-pilot}
@@ -506,7 +506,7 @@ Panel~(b) reports metadata-driven GERM-BO on \splitname{border\_hard} for $r \in
 \subsubsection*{Resource footprint.}
 Panel~(c) profiles the strict \splitname{3-mer-balanced} splice setting (seed 50, batch size 4, seq length 512). GERM-BO uses the same trainable parameter count as LoRA because compensation is a multiplicative gate on the LoRA branch rather than additional adapter weights. Peak GPU memory from forward snapshots differs by less than $1\%$; end-to-end training time per run is comparable (LoRA: 223\,s on seed 50) because compensation adds only elementwise scaling on the LoRA branch.
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 \centering
 \caption{Hyperparameter sensitivity and resource footprint.}
 \label{tab:comp-sensitivity}\label{tab:rank-sensitivity}\label{tab:resource-footprint}
@@ -558,7 +558,7 @@ Panel \textbf{(a)}, compensation strength $\lambda_{\mathrm{comp}}$ on held-out 
 
 To test whether the compensation mechanism is backbone-specific, we replicate the oracle-metadata \splitname{border\_hard} protocol on Nucleotide Transformer v2 50M~\cite{nucleotidetransformer2024} and HyenaDNA tiny~\cite{hyenadna2024} (held-out seeds 50--54; rank 8; $\lambda_{\mathrm{comp}}=0.27$; Table~\ref{tab:cross-backbone-oracle}). On NT v2 50M, LoRA reaches $0.8945 \pm 0.0124$ test accuracy and macro-F1, whereas metadata-driven GERM-BO reaches $0.9828 \pm 0.0045$ (paired $\Delta=+0.0883$). On HyenaDNA tiny, LoRA reaches $0.9625 \pm 0.0090$, whereas GERM-BO reaches $0.9945 \pm 0.0021$ (paired $\Delta=+0.0320$). These gains confirm that border-aware compensation transfers beyond DNABERT-2 under oracle border scores on the controlled hard split.
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 \centering
 \caption{Cross-backbone replication on oracle-metadata \splitname{border\_hard} (seeds 50--54).}
 \label{tab:cross-backbone-oracle}
@@ -579,7 +579,7 @@ Paired GERM-BO minus LoRA: NT v2 50M $\Delta=+0.0883$ accuracy; HyenaDNA tiny $\
 
 We next ask whether the same transfer holds on the strict \splitname{3-mer-balanced} splice split with label-free train-quantile border metadata (seeds 50--54; Table~\ref{tab:cross-backbone-splice-label-free}). DNABERT-2 GERM-BO improves over LoRA by $+0.0399$ accuracy and $+0.1176$ macro-F1 (bootstrap $95\%$ confidence intervals exclude zero). NT v2 50M shows a smaller mean gain ($+0.0290$ accuracy; $+0.0307$ macro-F1) with bootstrap confidence intervals crossing zero, despite a higher absolute LoRA baseline ($0.6447 \pm 0.0865$ accuracy). HyenaDNA tiny is near-null ($\Delta=-0.0024$ accuracy and macro-F1). Thus backbone generality is setting-dependent: compensation transfers strongly under oracle scores and on DNABERT-2 with label-free splice estimation, but is not yet robust on alternative backbones under the same label-free protocol.
 
-\begin{table}[p]
+\begin{table}[!htb]
 \centering
 \caption{Cross-backbone replication on the strict \splitname{3-mer-balanced} splice split with label-free border metadata (seeds 50--54).}
 \label{tab:cross-backbone-splice-label-free}
