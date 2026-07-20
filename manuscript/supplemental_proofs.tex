@@ -9,7 +9,7 @@
 
 This appendix contains the full mathematical details that are referenced in the main text. The appendix uses sections only, as requested. Each proof begins with a one sentence interpretation so that the formal derivation stays connected to the main insight.
 
-\section*{Proof of Proposition~\ref{prop:cluster}}\label{app:proofcluster}
+\section*{Proof of the cluster-length proposition}\label{app:proofcluster}
 
 Interpretation. This proof shows that the border score is a direct measure of expected local burst length.
 
@@ -37,7 +37,7 @@ Using the definition $\beta_w=\rho_w/(1-\rho_w)$ yields
 This completes the proof.
 \end{proof}
 
-\section*{Proof of Proposition~\ref{prop:variance}}\label{app:proofvariance}
+\section*{Proof of the variance proposition}\label{app:proofvariance}
 
 Interpretation. This proof shows that valid self overlap creates positive local dependence and therefore larger variance of token counts.
 
@@ -51,7 +51,7 @@ For brevity write $I_t=I_t(w;X)$. Since $N_w=\sum_{t=1}^{T-m+1} I_t$, the varian
 2\sum_{1\leq s<t\leq T-m+1}\mathrm{Cov}(I_s,I_t),
 \label{eq:appvardecomp}
 \end{equation}
-which is Equation~\eqref{eq:varcountbasic}. Stationarity implies $\mathbb{P}(I_t=1)=p_w$ and $\mathrm{Var}(I_t)=p_w(1-p_w)$.
+which is the variance decomposition used in the main retained-information argument. Stationarity implies $\mathbb{P}(I_t=1)=p_w$ and $\mathrm{Var}(I_t)=p_w(1-p_w)$.
 
 Now fix a shift $\ell$ with $1\leq \ell < m$. If $\ell \notin S(w)$, then two occurrences of $w$ at positions $t$ and $t+\ell$ are incompatible because the required prefix and suffix letters disagree. Hence
 \begin{equation}
@@ -80,7 +80,7 @@ Therefore
 p_w q_w(\ell)-p_w^2.
 \label{eq:appvalidcov}
 \end{equation}
-This proves Equation~\eqref{eq:covlocal}. Summing over all pairs with the same shift gives
+This proves the local-covariance identity used in the main derivation. Summing over all pairs with the same shift gives
 \begin{equation}
 \begin{aligned}
 \mathrm{Var}(N_w)
@@ -90,10 +90,10 @@ This proves Equation~\eqref{eq:covlocal}. Summing over all pairs with the same s
 \end{aligned}
 \label{eq:applocalsum}
 \end{equation}
-where $R_{\mathrm{long}}$ collects shifts at least $m$. Dropping all nonpositive invalid overlap terms and all nonnegative contributions from $R_{\mathrm{long}}$ yields the lower bound in Equation~\eqref{eq:varcountlower}. This completes the proof.
+where $R_{\mathrm{long}}$ collects shifts at least $m$. Dropping all nonpositive invalid overlap terms and all nonnegative contributions from $R_{\mathrm{long}}$ yields the lower bound stated in the main text. This completes the proof.
 \end{proof}
 
-\section*{Proof of Theorem~\ref{thm:fisher}}\label{app:prooffisher}
+\section*{Proof of the retained-information theorem}\label{app:prooffisher}
 
 Interpretation. This proof shows that a larger border score lowers retained information because suppression reacts to the larger burst scale of the response.
 
@@ -142,7 +142,7 @@ R_w(\tau)
 \mathbb{E}\!\left[\phi_{\tau}(b_w Z)^2\right].
 \label{eq:appscaled}
 \end{equation}
-This is Equation~\eqref{eq:retentionexpect}.
+This is the retained-information expectation identity used in the main text.
 
 To prove monotonicity, let $b_1 \leq b_2$. Since $\phi_{\tau}(u)$ is nonincreasing in $|u|$ and $|b_1 Z| \leq |b_2 Z|$ pointwise whenever $|Z|$ is fixed, we have
 \begin{equation}
@@ -160,12 +160,12 @@ Taking expectations gives
 Thus $R_w(\tau)$ is nonincreasing in $b_w$. Since $b_w=b_0(1+\beta_w)$ with $b_0>0$, $R_w(\tau)$ is also nonincreasing in $\beta_w$. If $\phi_{\tau}$ is strictly decreasing on a set of positive probability, then the inequality is strict for any $b_1 < b_2$ on a set of positive probability, which implies strict monotonicity. This completes the proof.
 \end{proof}
 
-\section*{Proof of Theorem~\ref{thm:gamma}}\label{app:proofgamma}
+\section*{Proof of the compensation-weight theorem}\label{app:proofgamma}
 
 Interpretation. This proof shows that the compensation weight should grow exactly where retained information becomes small.
 
 \begin{proof}
-The objective in Equation~\eqref{eq:gammaopt} is separable across words. For a fixed word $w \in \mathcal{H}$ define
+The compensation objective is separable across words. For a fixed word $w \in \mathcal{H}$ define
 \begin{equation}
 J_w(\gamma_w)
 =
@@ -242,18 +242,18 @@ where $\widehat{P}$ is the empirical transition matrix estimated from the pretra
 Interpretation. This section specifies how tokenizer vocabulary, border scores, and compensation are instantiated in the released trainer, resolving the notational gap between vocabulary-aligned $\Gamma$ and the deployed LoRA branch.
 
 \paragraph{Tokenizer-to-word alignment.}
-Each tokenizer token $w \in \mathcal{V}$ is mapped to a DNA string (BPE merge or $k$-mer in DNABERT-2). For token $w$ of nucleotide length $m(w)$, the overlap set $S(w)$ and border polynomial $B_w(z)$ are computed on that string. The continuation mass $\widehat{\rho}_w$ follows Equation~\eqref{eq:appmarkovrho} with $\widehat{P}$ estimated from a background corpus. The border score is $\beta_w = \widehat{\rho}_w / (1-\widehat{\rho}_w)$ when $\widehat{\rho}_w < 1$.
+Each tokenizer token $w \in \mathcal{V}$ is mapped to a DNA string (BPE merge or $k$-mer in DNABERT-2). For token $w$ of nucleotide length $m(w)$, the overlap set $S(w)$ and border polynomial $B_w(z)$ are computed on that string. The continuation mass $\widehat{\rho}_w$ follows the Markov continuation formula above with $\widehat{P}$ estimated from a background corpus. The border score is $\beta_w = \widehat{\rho}_w / (1-\widehat{\rho}_w)$ when $\widehat{\rho}_w < 1$.
 
 \paragraph{Controlled metadata score.}
-On synthetic border-aware splits, each sample stores a scalar \texttt{border\_score} in CSV metadata aligned with the constructed difficulty of that sample. During training, the score is batch-normalized and passed to Equation~\eqref{eq:implcomp} with $\lambda_{\mathrm{comp}}$, $c_{\min}$, and $c_{\max}$ from the YAML config.
+On synthetic border-aware splits, each sample stores a scalar \texttt{border\_score} in CSV metadata aligned with the constructed difficulty of that sample. During training, the score is batch-normalized and passed to the compensation rule in the main text with $\lambda_{\mathrm{comp}}$, $c_{\min}$, and $c_{\max}$ from the YAML config.
 
 \paragraph{External sequence-estimated score.}
-When metadata is unavailable, a label-free score is computed from the input sequence (center-window JSD over $k$-mers), then train-quantile normalized to reduce saturation before compensation. The same Equation~\eqref{eq:implcomp} path is used; only the score source changes.
+When metadata is unavailable, a label-free score is computed from the input sequence (center-window JSD over $k$-mers), then train-quantile normalized to reduce saturation before compensation. The same compensation path is used; only the score source changes.
 
 \paragraph{Low-rank branch.}
 For each targeted linear layer $W$, LoRA factors $A$ and $B$ are attached as in standard LoRA. GERM-BO replaces the additive update $y = Wx + \mathrm{scale}\cdot B(Ax)$ with $y = Wx + \mathrm{scale}\cdot B(Ax \cdot c(x))$, where $c(x)$ is broadcast across valid token positions in a sequence. No separate $\Gamma$ matrix is stored; the theoretical diagonal $\gamma_w$ is realized through $c(x)$ derived from $\beta_w$ or metadata.
 
 \paragraph{Hyperparameter correspondence.}
-Config field \texttt{compensation\_strength} equals $\lambda_{\mathrm{comp}}$ in Equation~\eqref{eq:implcomp}. Fields \texttt{compensation\_clip\_min} and \texttt{compensation\_clip\_max} equal $c_{\min}$ and $c_{\max}$. LoRA \texttt{rank} and \texttt{alpha} are $r$ and the LoRA scaling numerator. The theoretical $\lambda_{\Gamma}$, $\tau$, and $\alpha$ in Equations~\eqref{eq:gammaopt} and~\eqref{eq:powerlaw} are not exposed as trainer knobs in the current release.
+Config field \texttt{compensation\_strength} equals $\lambda_{\mathrm{comp}}$ in the main compensation rule. Fields \texttt{compensation\_clip\_min} and \texttt{compensation\_clip\_max} equal $c_{\min}$ and $c_{\max}$. LoRA \texttt{rank} and \texttt{alpha} are $r$ and the LoRA scaling numerator. The theoretical $\lambda_{\Gamma}$, $\tau$, and $\alpha$ are not exposed as trainer knobs in the current release.
 
 \end{document}
