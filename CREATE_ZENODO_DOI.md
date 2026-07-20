@@ -31,11 +31,10 @@ archived result summaries, manuscript files, and reproduction entry points.
 
 ## After Zenodo creates the DOI
 
-Replace `[ARCHIVE_DOI_URL_TO_BE_ADDED]` in:
+Replace the pending Zenodo DOI note in:
 
 - `manuscript/main.tex`
 - `README.md`
 - the working manuscript at `cell-press-latex-template/main.tex`
 
 Then rebuild the manuscript PDF and push one final GitHub release if needed.
-

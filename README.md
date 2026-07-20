@@ -8,7 +8,7 @@ This repository contains the code, processed data splits, configuration files, a
 - Article type framing: computational method / analytical framework
 - Contact during review: through the journal editorial system
 - Repository URL: https://github.com/hhhhmx/GERM-BO.git
-- Permanent archive: [ARCHIVE_DOI_URL_TO_BE_ADDED]
+- Permanent archive: Zenodo DOI to be added after the first archived GitHub release.
 
 ## Repository contents
 

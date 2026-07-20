@@ -52,7 +52,7 @@ Use Zenodo when you want a citable archive and DOI.
 2. Upload `reviewer_repository.zip`.
 3. Keep the record as a draft or restricted/private until publication policy is clear.
 4. Reserve or create the DOI before publication.
-5. Replace `[ARCHIVE_DOI_URL_TO_BE_ADDED]` in the manuscript and reviewer README.
+5. Replace the pending Zenodo DOI note in the manuscript and reviewer README after the archive is active.
 
 Pros: DOI and long-term archive.
 
@@ -64,7 +64,7 @@ In `cell-press-latex-template/main.tex`, replace:
 
 ```text
 [REVIEWER_REPOSITORY_URL_TO_BE_ADDED]
-[ARCHIVE_DOI_URL_TO_BE_ADDED]
+Zenodo DOI to be added after the archive is active.
 ```
 
 Use the OSF view-only link or private review link for the first placeholder. Use the Zenodo/OSF/Figshare DOI URL for the second placeholder when available.
@@ -86,4 +86,3 @@ Then verify:
 - `reviewer_repository/data/benchmarks/splice_sites_all_kmer_balanced/train.csv` exists.
 - `reviewer_repository/manuscript/main.pdf` exists.
 - `reviewer_repository.zip` is under the upload limit for the selected platform.
-

@@ -22,7 +22,7 @@ This checklist tracks the changes needed to submit the GERM-BO manuscript as a C
 ## Must complete before submission
 
 - Replace `[REVIEWER_REPOSITORY_URL_TO_BE_ADDED]` with an anonymous reviewer-accessible repository or private review link.
-- Replace `[ARCHIVE_DOI_URL_TO_BE_ADDED]` with a Zenodo, OSF, Figshare, or institutional archive DOI before publication.
+- Replace the pending archive note with a Zenodo, OSF, Figshare, or institutional archive DOI before publication.
 - Add a top-level `README.md` section or separate reviewer README with exact reproduction commands.
 - Include processed train/validation/test splits for controlled border-aware tasks and the strict `3-mer-balanced` splice split.
 - Include table and figure regeneration scripts for the main manuscript.
