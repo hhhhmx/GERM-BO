@@ -1,0 +1,33 @@
+{
+  "title": "GERM-BO: a reproducible border-aware adapter framework for genomic foundation models",
+  "upload_type": "software",
+  "description": "Code, processed data splits, configuration files, archived result summaries, manuscript files, and reproduction entry points for GERM-BO, a border-aware adapter framework for genomic foundation model adaptation.",
+  "creators": [
+    {
+      "name": "Huang, Mingxuan",
+      "affiliation": "Zhongshan School of Medicine, Sun Yat-sen University"
+    },
+    {
+      "name": "Wang, Jingchao"
+    },
+    {
+      "name": "Shi, Yang"
+    }
+  ],
+  "keywords": [
+    "genomic foundation models",
+    "parameter-efficient adaptation",
+    "LoRA",
+    "DNA word overlap",
+    "outlier suppression",
+    "computational genomics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/hhhhmx/GERM-BO",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "access_right": "open"
+}
