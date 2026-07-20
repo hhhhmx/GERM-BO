@@ -1,0 +1,7 @@
+benchmark,method,label,seed,selected_threshold,val_accuracy,val_f1,test_accuracy,test_f1,test_precision,test_recall
+splice_sites_all,baseline_lora,Baseline LoRA,42,,0.38166666666666665,0.3056633628776815,0.3641666666666667,0.29055856282217085,,
+splice_sites_all,baseline_lora,Baseline LoRA,43,,0.3333333333333333,0.16666666666666666,0.3333333333333333,0.16666666666666666,,
+splice_sites_all,baseline_lora,Baseline LoRA,44,,0.36833333333333335,0.27265913461243096,0.38166666666666665,0.28695666412857485,,
+splice_sites_all,germ_bo_center_jsd,Metadata-estimated GERM-BO center-JSD,42,,0.39666666666666667,0.3536832635778903,0.3958333333333333,0.3520738107019162,,
+splice_sites_all,germ_bo_center_jsd,Metadata-estimated GERM-BO center-JSD,43,,0.4033333333333333,0.32341717143353793,0.39416666666666667,0.3192720748155204,,
+splice_sites_all,germ_bo_center_jsd,Metadata-estimated GERM-BO center-JSD,44,,0.4033333333333333,0.3591143364606147,0.4025,0.3689039747387211,,

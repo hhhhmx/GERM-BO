@@ -1,0 +1,16 @@
+benchmark,method,label,family,seed,val_accuracy,val_macro_f1,test_accuracy,test_macro_f1
+splice_sites_all_larger,baseline_lora,Baseline LoRA,baseline,42,0.37833333333333335,0.31856382300667097,0.38766666666666666,0.32816342594555453
+splice_sites_all_larger,baseline_lora,Baseline LoRA,baseline,43,0.42833333333333334,0.3922674726259374,0.42,0.3811635555582971
+splice_sites_all_larger,baseline_lora,Baseline LoRA,baseline,44,0.3333333333333333,0.16666666666666666,0.3333333333333333,0.16666666666666666
+splice_sites_all_larger,germ_bo_center_w48_k2_t25_s4,GERM-BO center-JSD w48 k2 top25 scale4,germ_bo,42,0.39944444444444444,0.36406276101952684,0.37366666666666665,0.3382621390704117
+splice_sites_all_larger,germ_bo_center_w48_k2_t25_s4,GERM-BO center-JSD w48 k2 top25 scale4,germ_bo,43,0.33444444444444443,0.16928459763269557,0.334,0.16954739352361803
+splice_sites_all_larger,germ_bo_center_w48_k2_t25_s4,GERM-BO center-JSD w48 k2 top25 scale4,germ_bo,44,0.4066666666666667,0.34425605865417036,0.375,0.31395184168118334
+splice_sites_all_larger,germ_bo_center_w64_k2_t10_s4,GERM-BO center-JSD w64 k2 top10 scale4,germ_bo,42,0.3572222222222222,0.2378098777069997,0.368,0.2578575427537573
+splice_sites_all_larger,germ_bo_center_w64_k2_t10_s4,GERM-BO center-JSD w64 k2 top10 scale4,germ_bo,43,0.36777777777777776,0.26045732500650537,0.36666666666666664,0.2626084905856932
+splice_sites_all_larger,germ_bo_center_w64_k2_t10_s4,GERM-BO center-JSD w64 k2 top10 scale4,germ_bo,44,0.39111111111111113,0.3193361062844087,0.38,0.31259485855690533
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO center-JSD w64 k3 top10 scale3,germ_bo,42,0.41388888888888886,0.35830906260379775,0.399,0.340192278615975
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO center-JSD w64 k3 top10 scale3,germ_bo,43,0.3977777777777778,0.3153051420509516,0.3903333333333333,0.30983974263559366
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO center-JSD w64 k3 top10 scale3,germ_bo,44,0.3638888888888889,0.2646692840244283,0.36833333333333335,0.276880329902736
+splice_sites_all_larger,germ_bo_motif_w64_k2_t10_s3_m05,GERM-BO center-JSD+motif w64 k2 top10 scale3 m0.5,germ_bo,42,0.3738888888888889,0.2672892235098598,0.36833333333333335,0.26176682692967074
+splice_sites_all_larger,germ_bo_motif_w64_k2_t10_s3_m05,GERM-BO center-JSD+motif w64 k2 top10 scale3 m0.5,germ_bo,43,0.3738888888888889,0.2797362621131316,0.373,0.283047776675824
+splice_sites_all_larger,germ_bo_motif_w64_k2_t10_s3_m05,GERM-BO center-JSD+motif w64 k2 top10 scale3 m0.5,germ_bo,44,0.37722222222222224,0.2863491669204061,0.37533333333333335,0.2890000972025012

@@ -1,0 +1,36 @@
+benchmark,method,label,family,seed,val_accuracy,val_macro_f1,test_accuracy,test_macro_f1
+splice_sites_all_larger,baseline_lora,Baseline LoRA full target set,reference,45,0.37166666666666665,0.2828198204412409,0.374,0.2848331662066459
+splice_sites_all_larger,baseline_lora,Baseline LoRA full target set,reference,46,0.3333333333333333,0.16666666666666666,0.3333333333333333,0.16666666666666666
+splice_sites_all_larger,baseline_lora,Baseline LoRA full target set,reference,47,0.43,0.40176838042310953,0.42866666666666664,0.3988963641361066
+splice_sites_all_larger,baseline_lora,Baseline LoRA full target set,reference,48,0.37166666666666665,0.28382811214443326,0.37833333333333335,0.2899386852022001
+splice_sites_all_larger,baseline_lora,Baseline LoRA full target set,reference,49,0.40555555555555556,0.35833057377927346,0.41233333333333333,0.36764555990298287
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO w64/k3/top10/scale3,reference,45,0.37777777777777777,0.37871502878279334,0.38666666666666666,0.3854811826997473
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO w64/k3/top10/scale3,reference,46,0.4683333333333333,0.4678377815756698,0.461,0.46119045540643705
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO w64/k3/top10/scale3,reference,47,0.40055555555555555,0.32312022179207234,0.385,0.31311162383400665
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO w64/k3/top10/scale3,reference,48,0.3761111111111111,0.27985750381306584,0.3626666666666667,0.266838578305896
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO w64/k3/top10/scale3,reference,49,0.38166666666666665,0.32409867673379816,0.4023333333333333,0.338660797405405
+splice_sites_all_larger,lora_classifier_only,LoRA classifier only,baseline,45,0.34055555555555556,0.19191015288992483,0.3396666666666667,0.1953062028432714
+splice_sites_all_larger,lora_classifier_only,LoRA classifier only,baseline,46,0.3383333333333333,0.18443220830864385,0.3363333333333333,0.18334943936993028
+splice_sites_all_larger,lora_classifier_only,LoRA classifier only,baseline,47,0.3411111111111111,0.1906991559464172,0.3363333333333333,0.18286361177534802
+splice_sites_all_larger,lora_classifier_only,LoRA classifier only,baseline,48,0.34,0.1896169868241898,0.33666666666666667,0.18858364929980512
+splice_sites_all_larger,lora_classifier_only,LoRA classifier only,baseline,49,0.33611111111111114,0.17861811820941317,0.3353333333333333,0.17878074720223858
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,baseline,45,0.4161111111111111,0.36946090717235885,0.407,0.357030002672442
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,baseline,46,0.4111111111111111,0.3585781800969654,0.3963333333333333,0.34282377031476724
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,baseline,47,0.3988888888888889,0.3285517007782525,0.4033333333333333,0.33232783354532763
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,baseline,48,0.3983333333333333,0.3184086331173988,0.393,0.3112496699532689
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,baseline,49,0.3927777777777778,0.35202936046367345,0.4013333333333333,0.36587558086741684
+splice_sites_all_larger,lora_wqkv_classifier,LoRA Wqkv + classifier,baseline,45,0.4177777777777778,0.38034495096557414,0.41,0.3734432051360437
+splice_sites_all_larger,lora_wqkv_classifier,LoRA Wqkv + classifier,baseline,46,0.3338888888888889,0.17906180742777558,0.33366666666666667,0.17968038678588807
+splice_sites_all_larger,lora_wqkv_classifier,LoRA Wqkv + classifier,baseline,47,0.33444444444444443,0.16908642713286579,0.333,0.16897783296980887
+splice_sites_all_larger,lora_wqkv_classifier,LoRA Wqkv + classifier,baseline,48,0.3827777777777778,0.29585263771184395,0.375,0.2913482238719442
+splice_sites_all_larger,lora_wqkv_classifier,LoRA Wqkv + classifier,baseline,49,0.4177777777777778,0.41653773270183886,0.4053333333333333,0.4033980450964021
+splice_sites_all_larger,germ_bo_w64k3_comp0,GERM-BO w64/k3 comp=0,ablation,45,0.4161111111111111,0.36946090717235885,0.407,0.357030002672442
+splice_sites_all_larger,germ_bo_w64k3_comp0,GERM-BO w64/k3 comp=0,ablation,46,0.4111111111111111,0.3585781800969654,0.3963333333333333,0.34282377031476724
+splice_sites_all_larger,germ_bo_w64k3_comp0,GERM-BO w64/k3 comp=0,ablation,47,0.3988888888888889,0.3285517007782525,0.4033333333333333,0.33232783354532763
+splice_sites_all_larger,germ_bo_w64k3_comp0,GERM-BO w64/k3 comp=0,ablation,48,0.3983333333333333,0.3184086331173988,0.393,0.3112496699532689
+splice_sites_all_larger,germ_bo_w64k3_comp0,GERM-BO w64/k3 comp=0,ablation,49,0.3927777777777778,0.35202936046367345,0.4013333333333333,0.36587558086741684
+splice_sites_all_larger,germ_bo_w64k3_shuffled,GERM-BO w64/k3 shuffled metadata,ablation,45,0.35777777777777775,0.23829217214714438,0.356,0.23595878128653372
+splice_sites_all_larger,germ_bo_w64k3_shuffled,GERM-BO w64/k3 shuffled metadata,ablation,46,0.37666666666666665,0.33266982337835893,0.368,0.3277106431838191
+splice_sites_all_larger,germ_bo_w64k3_shuffled,GERM-BO w64/k3 shuffled metadata,ablation,47,0.3655555555555556,0.2625622876242088,0.37366666666666665,0.2738221898557615
+splice_sites_all_larger,germ_bo_w64k3_shuffled,GERM-BO w64/k3 shuffled metadata,ablation,48,0.4022222222222222,0.34462597991211047,0.4036666666666667,0.345194507020717
+splice_sites_all_larger,germ_bo_w64k3_shuffled,GERM-BO w64/k3 shuffled metadata,ablation,49,0.395,0.34457317172200513,0.38466666666666666,0.32855754542437404

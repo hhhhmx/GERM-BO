@@ -1,0 +1,5 @@
+task,task_label,method,method_label,n_seeds,test_accuracy_mean,test_accuracy_std,test_f1_mean,test_f1_std,per_seed_accuracy
+H3K4me3,H3K4me3 chromatin mark,baseline_lora,Baseline LoRA,3,0.541,0.05985816569190872,0.46914096796037463,0.11560210395423257,0.5100 / 0.5030 / 0.6100
+H3K4me3,H3K4me3 chromatin mark,germ_bo_center_jsd,Metadata-estimated GERM-BO center-JSD,3,0.5526666666666666,0.02685764943797821,0.5095433174126262,0.058816037683648785,0.5720 / 0.5640 / 0.5220
+enhancers,Enhancers (regulatory elements),baseline_lora,Baseline LoRA,3,0.7216666666666667,0.02742413778650728,0.7164441821319815,0.034093689375192,0.7375 / 0.7375 / 0.6900
+enhancers,Enhancers (regulatory elements),germ_bo_center_jsd,Metadata-estimated GERM-BO center-JSD,3,0.7291666666666666,0.005204164998665327,0.726475337374698,0.004969869925383448,0.7250 / 0.7275 / 0.7350

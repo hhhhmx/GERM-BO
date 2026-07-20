@@ -1,0 +1,7 @@
+method,config,seed,test_accuracy,test_f1,test_loss
+baseline_lora,configs/real_dnabert2_baseline_hard_border_large_formal.yaml,42,0.8047,0.8201,0.6073
+baseline_lora,configs/real_dnabert2_baseline_hard_border_large_formal.yaml,43,0.8477,0.8395,0.5009
+baseline_lora,configs/real_dnabert2_baseline_hard_border_large_formal.yaml,44,0.8438,0.8291,0.5024
+germ_bo_0.27,configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,42,0.8555,0.8477,0.5404
+germ_bo_0.27,configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,43,0.8438,0.8276,0.4963
+germ_bo_0.27,configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,44,0.8320,0.8054,0.4575

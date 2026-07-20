@@ -1,0 +1,6 @@
+benchmark,method,label,family,n_seeds,test_accuracy_mean,test_accuracy_std,test_macro_f1_mean,test_macro_f1_std,per_seed_accuracy,per_seed_macro_f1
+splice_sites_all_larger,baseline_lora,Baseline LoRA,baseline,3,0.3803333333333333,0.0437962453997042,0.29199788272350613,0.1117281912654837,0.3877 / 0.4200 / 0.3333,0.3282 / 0.3812 / 0.1667
+splice_sites_all_larger,germ_bo_center_w48_k2_t25_s4,GERM-BO center-JSD w48 k2 top25 scale4,germ_bo,3,0.36088888888888887,0.02329600188237679,0.2739204580917377,0.09120334475935539,0.3737 / 0.3340 / 0.3750,0.3383 / 0.1695 / 0.3140
+splice_sites_all_larger,germ_bo_center_w64_k2_t10_s4,GERM-BO center-JSD w64 k2 top10 scale4,germ_bo,3,0.37155555555555553,0.007343427396381482,0.27768696396545195,0.030324308812097602,0.3680 / 0.3667 / 0.3800,0.2579 / 0.2626 / 0.3126
+splice_sites_all_larger,germ_bo_center_w64_k3_t10_s3,GERM-BO center-JSD w64 k3 top10 scale3,germ_bo,3,0.3858888888888889,0.015809045699406585,0.30897078371810155,0.03166491796400504,0.3990 / 0.3903 / 0.3683,0.3402 / 0.3098 / 0.2769
+splice_sites_all_larger,germ_bo_motif_w64_k2_t10_s3_m05,GERM-BO center-JSD+motif w64 k2 top10 scale3 m0.5,germ_bo,3,0.37222222222222223,0.00356422554052121,0.2779382336026653,0.01431758796901928,0.3683 / 0.3730 / 0.3753,0.2618 / 0.2830 / 0.2890

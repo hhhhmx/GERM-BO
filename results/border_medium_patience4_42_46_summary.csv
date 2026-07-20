@@ -1,0 +1,2 @@
+task,method,n_seeds,test_accuracy_mean,test_accuracy_std,test_accuracy_min,test_accuracy_max,test_accuracy_ci95_low,test_accuracy_ci95_high,test_f1_mean,test_f1_std,val_accuracy_mean,val_accuracy_std
+border_medium,GERM-BO final attention.output + classifier patience=4,5,0.89296875,0.05569660507074242,0.82421875,0.9609375,0.8238233674659418,0.9621141325340582,0.8989116834234205,0.04974575142082727,0.90078125,0.028518300388193717

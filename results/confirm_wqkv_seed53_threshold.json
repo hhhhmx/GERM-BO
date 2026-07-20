@@ -1,0 +1,49 @@
+{
+  "config": "configs/real_dnabert2_germ_bo_hard_border_large_comp027_main_wqkv_classifier.yaml",
+  "checkpoint": "outputs/confirm_wqkv_seed53/checkpoints/best.pt",
+  "selected_threshold": 0.4339739978313446,
+  "validation": {
+    "threshold": 0.4339739978313446,
+    "accuracy": 0.90625,
+    "f1": 0.9032258064516129,
+    "precision": 0.9333333333333333,
+    "recall": 0.875,
+    "predicted_label_counts": {
+      "0": 136,
+      "1": 120
+    },
+    "confusion": {
+      "true_positive": 112,
+      "false_positive": 8,
+      "true_negative": 120,
+      "false_negative": 16
+    }
+  },
+  "test": {
+    "threshold": 0.4339739978313446,
+    "accuracy": 0.90625,
+    "f1": 0.9032258064516129,
+    "precision": 0.9333333333333333,
+    "recall": 0.875,
+    "predicted_label_counts": {
+      "0": 136,
+      "1": 120
+    },
+    "confusion": {
+      "true_positive": 112,
+      "false_positive": 8,
+      "true_negative": 120,
+      "false_negative": 16
+    }
+  },
+  "device_report": {
+    "torch_version": "2.5.1+cu124",
+    "cuda_visible_devices": "3",
+    "cuda_available": true,
+    "visible_gpu_count": 1,
+    "selected_device": "cuda:0",
+    "selected_gpu_name": "NVIDIA H20",
+    "memory_allocated_mb": 446.8,
+    "memory_reserved_mb": 490.0
+  }
+}

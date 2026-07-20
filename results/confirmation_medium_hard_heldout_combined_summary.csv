@@ -1,0 +1,3 @@
+comp,label,n_runs,val_accuracy_mean,val_accuracy_std,test_accuracy_mean,test_accuracy_std,test_accuracy_min,test_accuracy_max,test_f1_mean,test_f1_std
+027,"combined main candidate: comp=0.27, clip=[0.73,1.42], patience=4",16,0.895751953125,0.037838068952799675,0.875732421875,0.054280830775523224,0.74609375,0.9375,0.8768456263585674,0.053186102403592436
+015,"medium-stabilized candidate: comp=0.15, clip=[0.85,1.30], patience=4",16,0.892822265625,0.0481588243130191,0.874755859375,0.06447827397613405,0.703125,0.953125,0.8773539398805654,0.06080504734054511

@@ -1,0 +1,6 @@
+task,method,label,seed,selected_threshold,val_accuracy,val_f1,test_accuracy,test_f1,test_precision,test_recall,pred_0,pred_1,cuda_visible_devices,visible_gpu_count,selected_device,selected_gpu_name
+border_medium,germ_bo,GERM-BO final attention.output + classifier patience=4,42,0.48508381843566895,0.875,0.8823529411764706,0.82421875,0.8375451263537906,0.7785234899328859,0.90625,107,149,3,1,cuda:0,NVIDIA H20
+border_medium,germ_bo,GERM-BO final attention.output + classifier patience=4,43,0.5128586888313293,0.87890625,0.8821292775665399,0.87890625,0.8847583643122676,0.8439716312056738,0.9296875,115,141,3,1,cuda:0,NVIDIA H20
+border_medium,germ_bo,GERM-BO final attention.output + classifier patience=4,44,0.4516780972480774,0.88671875,0.8929889298892989,0.86328125,0.8736462093862817,0.8120805369127517,0.9453125,107,149,3,1,cuda:0,NVIDIA H20
+border_medium,germ_bo,GERM-BO final attention.output + classifier patience=4,45,0.43101567029953003,0.9296875,0.9302325581395349,0.9375,0.9389312977099238,0.917910447761194,0.9609375,122,134,3,1,cuda:0,NVIDIA H20
+border_medium,germ_bo,GERM-BO final attention.output + classifier patience=4,46,0.3851942718029022,0.93359375,0.9317269076305222,0.9609375,0.9596774193548387,0.9916666666666667,0.9296875,136,120,3,1,cuda:0,NVIDIA H20

@@ -1,0 +1,3 @@
+comparison,metric,mean_delta,delta_std,bootstrap_ci95_low,bootstrap_ci95_high,win_rate,per_seed_delta
+germ_bo_center_jsd_minus_baseline_lora,test_accuracy,0.03777777777777778,0.02068838464596159,0.02083333333333337,0.06083333333333335,1.0,+0.0317 / +0.0608 / +0.0208
+germ_bo_center_jsd_minus_baseline_lora,test_f1,0.09868932221291511,0.04779723358985746,0.06151524787974533,0.15260540814885373,1.0,+0.0615 / +0.1526 / +0.0819

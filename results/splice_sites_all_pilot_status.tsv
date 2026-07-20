@@ -1,0 +1,6 @@
+baseline_lora	42	done	results/splice_sites_all_baseline_lora_seed42_argmax.json
+germ_bo_center_jsd	42	done	results/splice_sites_all_germ_bo_center_jsd_seed42_argmax.json
+baseline_lora	43	done	results/splice_sites_all_baseline_lora_seed43_argmax.json
+germ_bo_center_jsd	43	done	results/splice_sites_all_germ_bo_center_jsd_seed43_argmax.json
+baseline_lora	44	done	results/splice_sites_all_baseline_lora_seed44_argmax.json
+germ_bo_center_jsd	44	done	results/splice_sites_all_germ_bo_center_jsd_seed44_argmax.json

@@ -1,0 +1,17 @@
+{
+  "accuracy": 0.8203125,
+  "f1": 0.7850467289719625,
+  "auroc": null,
+  "loss": 0.5587757229804993,
+  "split": "test",
+  "device_report": {
+    "torch_version": "2.5.1+cu124",
+    "cuda_visible_devices": "3",
+    "cuda_available": true,
+    "visible_gpu_count": 1,
+    "selected_device": "cuda:0",
+    "selected_gpu_name": "NVIDIA H20",
+    "memory_allocated_mb": 446.9,
+    "memory_reserved_mb": 490.0
+  }
+}

@@ -1,0 +1,3 @@
+method,label,n_seeds,test_accuracy_mean,test_accuracy_std,test_f1_mean,test_f1_std,per_seed_accuracy
+baseline_lora,Baseline LoRA,5,0.8178,0.003420526275297417,0.8360321737507026,0.005462489112284646,0.8220 / 0.8150 / 0.8160 / 0.8150 / 0.8210
+metadata_w64_k2_t10_s3,Metadata-estimated GERM-BO w64_k2_t10_s3,5,0.8168,0.0031937438845342234,0.8359335582721349,0.004032160030204671,0.8170 / 0.8210 / 0.8170 / 0.8170 / 0.8120

@@ -1,0 +1,29 @@
+section,model,seeds,accuracy_mean,accuracy_std,f1_mean,f1_std,min_accuracy,max_accuracy,note
+main,Baseline LoRA,13,0.8377,0.0544,0.8300,0.0725,0.7305,0.9102,hard_border_large
+main,Activation-derived GERM-BO,13,0.8918,0.0255,0.8896,0.0276,0.8477,0.9297,previous main config
+main,Metadata-driven GERM-BO,13,0.9519,0.0443,0.9493,0.0483,0.8828,0.9961,new strongest config
+mechanism,No compensation,16,0.8706,0.0685,0.8741,0.0601,0.6367,,held-out medium+hard
+mechanism,Activation-derived compensation,16,0.8757,0.0543,0.8768,0.0532,0.7461,,held-out medium+hard
+mechanism,Metadata-driven compensation,16,0.9272,0.0583,0.9251,0.0613,0.7891,,held-out medium+hard
+shuffled,Real metadata,16,0.9272,0.0583,0.9251,0.0613,,,held-out medium+hard
+shuffled,Shuffled metadata,16,0.8638,0.0598,0.8607,0.0718,,,held-out medium+hard
+external_pilot,Baseline LoRA,5,0.6000,0.0342,0.6490,0.0494,,,UCI promoter pilot 74/16/16 split
+external_pilot,Activation-derived GERM-BO,5,0.6125,0.1677,0.5856,0.2149,,,UCI promoter pilot 74/16/16 split
+external_pilot,Metadata-driven GERM-BO,5,0.5750,0.1118,0.6129,0.1382,,,UCI promoter pilot 74/16/16 split
+larger_external_pilot,Baseline LoRA,3,0.8103,0.0021,0.8238,0.0071,,,human_nontata_promoters pilot 2000/500/1000 split
+larger_external_pilot,Activation-derived GERM-BO,3,0.8090,0.0151,0.8289,0.0119,,,human_nontata_promoters pilot 2000/500/1000 split
+larger_external_pilot,Metadata-estimated GERM-BO,3,0.7993,0.0184,0.8207,0.0148,,,human_nontata_promoters pilot 2000/500/1000 split
+estimator_grid,Metadata-estimated GERM-BO w64_k2_t10_s3,3,0.8173,0.0040,0.8350,0.0029,,,best label-free estimator on human_nontata_promoters pilot; delta acc vs baseline +0.0070
+external_heldout,Baseline LoRA,5,0.8178,0.0034,0.8360,0.0055,,,human_nontata_promoters held-out seeds 45-49
+external_heldout,Metadata-estimated GERM-BO w64_k2_t10_s3,5,0.8168,0.0032,0.8359,0.0040,,,human_nontata_promoters held-out seeds 45-49; delta acc vs baseline -0.0010; not upgraded
+embedding_estimator,Baseline LoRA,3,0.8103,0.0021,0.8238,0.0071,,,human_nontata_promoters seeds 42-44 comparator
+embedding_estimator,Token embedding shift tw8,3,0.8037,0.0067,0.8201,0.0035,,,frozen DNABERT-2 token embedding estimator; delta acc vs baseline -0.0067
+embedding_estimator,Token embedding shift tw16,3,0.8097,0.0055,0.8279,0.0044,,,frozen DNABERT-2 token embedding estimator; delta acc vs baseline -0.0007
+embedding_estimator,Contextual DNABERT-2 shift tw8,3,0.8003,0.0231,0.8217,0.0161,,,contextual representation-shift estimator; delta acc vs baseline -0.0100
+embedding_estimator,Contextual DNABERT-2 shift tw16,3,0.8130,0.0040,0.8316,0.0052,,,contextual representation-shift estimator; delta acc vs baseline +0.0027; needs held-out confirmation
+embedding_heldout,Baseline LoRA,5,0.8178,0.0034,0.8360,0.0055,,,human_nontata_promoters held-out seeds 45-49
+embedding_heldout,Contextual DNABERT-2 shift tw16,5,0.8136,0.0064,0.8299,0.0071,,,held-out delta acc vs baseline -0.0042; not promoted
+splice_external_pilot,Baseline LoRA,3,0.3597,0.0245,0.2481,0.0705,,,splice_sites_all pilot 3000/600/1200; argmax macro-F1
+splice_external_pilot,Metadata-estimated GERM-BO center-JSD,3,0.3975,0.0044,0.3467,0.0252,,,splice_sites_all pilot; delta acc +0.0378; delta macro-F1 +0.0987; needs held-out confirmation
+splice_external_heldout,Baseline LoRA,5,0.3815,0.0289,0.2930,0.0823,,,splice_sites_all held-out seeds 45-49
+splice_external_heldout,Metadata-estimated GERM-BO center-JSD,5,0.3863,0.0284,0.3297,0.0665,,,splice_sites_all held-out; delta acc +0.0048; delta macro-F1 +0.0368; directional but not stable

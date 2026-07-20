@@ -1,0 +1,4 @@
+method,config,seed,accuracy,f1,loss
+germ_bo_lowcomp_hard_border,configs/real_dnabert2_germ_bo_hard_border_lowcomp_robust.yaml,42,0.8984,0.8926,0.5179
+germ_bo_lowcomp_hard_border,configs/real_dnabert2_germ_bo_hard_border_lowcomp_robust.yaml,43,0.5000,0.0000,0.7042
+germ_bo_lowcomp_hard_border,configs/real_dnabert2_germ_bo_hard_border_lowcomp_robust.yaml,44,0.5000,0.0000,0.6946

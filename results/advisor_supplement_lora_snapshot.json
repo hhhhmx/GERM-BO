@@ -1,0 +1,18 @@
+{
+  "config": "configs/real_dnabert2_lora_attention_output_classifier_splice_sites_all_kmer_balanced.yaml",
+  "seed": 50,
+  "trainable_params": 30744,
+  "total_params": 117101595,
+  "trainable_fraction": 0.000263,
+  "device_report": {
+    "torch_version": "2.5.1+cu124",
+    "cuda_visible_devices": "3",
+    "cuda_available": true,
+    "visible_gpu_count": 1,
+    "selected_device": "cuda:0",
+    "selected_gpu_name": "NVIDIA H20",
+    "memory_allocated_mb": 446.71,
+    "memory_reserved_mb": 490.0
+  },
+  "peak_memory_mb": 586.76
+}

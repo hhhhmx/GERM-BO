@@ -1,0 +1,17 @@
+{
+  "accuracy": 1.0,
+  "f1": 1.0,
+  "auroc": null,
+  "loss": 0.37077465653419495,
+  "split": "test",
+  "device_report": {
+    "torch_version": "2.11.0+cpu",
+    "cuda_visible_devices": null,
+    "cuda_available": false,
+    "visible_gpu_count": 0,
+    "selected_device": "cpu",
+    "selected_gpu_name": null,
+    "memory_allocated_mb": null,
+    "memory_reserved_mb": null
+  }
+}

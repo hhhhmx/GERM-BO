@@ -1,0 +1,4 @@
+config,checkpoint_policy,split,seed,best_epoch,test_accuracy,test_f1,test_loss
+configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,accuracy_max_best,data/splits_hard_border_large,42,2,0.8555,0.8477,0.5404
+configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,accuracy_max_best,data/splits_hard_border_large,43,2,0.8438,0.8276,0.4963
+configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,accuracy_max_best,data/splits_hard_border_large,44,3,0.8320,0.8054,0.4575

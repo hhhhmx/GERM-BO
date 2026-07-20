@@ -1,0 +1,4 @@
+benchmark,method,label,n_seeds,test_accuracy_mean,test_accuracy_std,test_f1_mean,test_f1_std,per_seed_accuracy
+human_nontata_promoters,baseline_lora,Baseline LoRA,3,0.8103333333333333,0.0020816659994661343,0.8237534239295101,0.007103405467048511,0.8080 / 0.8120 / 0.8110
+human_nontata_promoters,germ_bo_activation,GERM-BO activation-derived,3,0.8089999999999999,0.015132745950421507,0.8288761988779255,0.011900662188175941,0.8210 / 0.8140 / 0.7920
+human_nontata_promoters,germ_bo_metadata_estimated,GERM-BO metadata-estimated,3,0.7993333333333333,0.018448125469362253,0.8206864734273916,0.014822785003847172,0.7790 / 0.8150 / 0.8040

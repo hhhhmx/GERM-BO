@@ -1,0 +1,359 @@
+{
+  "config": "configs/real_dnabert2_germ_bo_border_hard_metadata_comp027_p4.yaml",
+  "checkpoint": "outputs/retention_calib_train_border_hard_germ_bo_seed50/checkpoints/best.pt",
+  "model_label": "germ_bo",
+  "hook_module": "encoder.encoder.layer.0.attention.output.dense",
+  "seed": 50,
+  "n_samples": 1024,
+  "device_report": {
+    "torch_version": "2.5.1+cu124",
+    "cuda_visible_devices": "3",
+    "cuda_available": true,
+    "visible_gpu_count": 1,
+    "selected_device": "cuda:0",
+    "selected_gpu_name": "NVIDIA H20",
+    "memory_allocated_mb": 446.71,
+    "memory_reserved_mb": 490.0
+  },
+  "calibrated_tau": {
+    "tau": 0.18449735641479492,
+    "target_clip_fraction": 0.01,
+    "empirical_clip_fraction": 0.009765625,
+    "activation_p95": 0.17746120691299438,
+    "activation_p99": 0.184134840965271
+  },
+  "tau_grid": [
+    0.0,
+    0.1195138692855835,
+    0.14921152591705322,
+    0.17395846545696259,
+    0.17766830325126648,
+    0.18025073409080505,
+    0.18449735641479492,
+    0.18823611736297607
+  ],
+  "overall": {
+    "n_samples": 1024,
+    "border_score_mean": 0.4365234673023224,
+    "border_score_std": 0.312052845954895,
+    "activation_mean": 0.13049151003360748,
+    "activation_std": 0.02585018053650856,
+    "gradient_mean": 0.001085209078155458,
+    "retention_by_tau": {
+      "0.0": {
+        "R_empirical": 0.0,
+        "R_scale": 0.0,
+        "clip_fraction": 1.0,
+        "n": 1024.0
+      },
+      "0.1195138692855835": {
+        "R_empirical": 0.38350239396095276,
+        "R_scale": 0.5009765625,
+        "clip_fraction": 0.4990234375,
+        "n": 1024.0
+      },
+      "0.14921152591705322": {
+        "R_empirical": 0.9815099239349365,
+        "R_scale": 0.75,
+        "clip_fraction": 0.25,
+        "n": 1024.0
+      },
+      "0.17395846545696259": {
+        "R_empirical": 0.9823358058929443,
+        "R_scale": 0.900390625,
+        "clip_fraction": 0.099609375,
+        "n": 1024.0
+      },
+      "0.17766830325126648": {
+        "R_empirical": 0.9971827268600464,
+        "R_scale": 0.9501953125,
+        "clip_fraction": 0.0498046875,
+        "n": 1024.0
+      },
+      "0.18025073409080505": {
+        "R_empirical": 0.9978198409080505,
+        "R_scale": 0.974609375,
+        "clip_fraction": 0.025390625,
+        "n": 1024.0
+      },
+      "0.18449735641479492": {
+        "R_empirical": 0.9983273148536682,
+        "R_scale": 0.990234375,
+        "clip_fraction": 0.009765625,
+        "n": 1024.0
+      },
+      "0.18823611736297607": {
+        "R_empirical": 0.998444139957428,
+        "R_scale": 0.9951171875,
+        "clip_fraction": 0.0048828125,
+        "n": 1024.0
+      }
+    }
+  },
+  "border_groups": {
+    "border=0.000": {
+      "n_samples": 157,
+      "border_score_mean": 0.0,
+      "border_score_std": 0.0,
+      "activation_mean": 0.13235566020011902,
+      "activation_std": 0.0241091288626194,
+      "gradient_mean": 0.0009197915205731988,
+      "retention_by_tau": {
+        "0.0": {
+          "R_empirical": 0.0,
+          "R_scale": 0.0,
+          "clip_fraction": 1.0,
+          "n": 157.0
+        },
+        "0.1195138692855835": {
+          "R_empirical": 0.20905323326587677,
+          "R_scale": 0.47133758664131165,
+          "clip_fraction": 0.5286624431610107,
+          "n": 157.0
+        },
+        "0.14921152591705322": {
+          "R_empirical": 0.999519407749176,
+          "R_scale": 0.7070063948631287,
+          "clip_fraction": 0.2929936349391937,
+          "n": 157.0
+        },
+        "0.17395846545696259": {
+          "R_empirical": 0.9999997615814209,
+          "R_scale": 0.993630588054657,
+          "clip_fraction": 0.006369426846504211,
+          "n": 157.0
+        },
+        "0.17766830325126648": {
+          "R_empirical": 1.0,
+          "R_scale": 1.0,
+          "clip_fraction": 0.0,
+          "n": 157.0
+        },
+        "0.18025073409080505": {
+          "R_empirical": 1.0,
+          "R_scale": 1.0,
+          "clip_fraction": 0.0,
+          "n": 157.0
+        },
+        "0.18449735641479492": {
+          "R_empirical": 1.0,
+          "R_scale": 1.0,
+          "clip_fraction": 0.0,
+          "n": 157.0
+        },
+        "0.18823611736297607": {
+          "R_empirical": 1.0,
+          "R_scale": 1.0,
+          "clip_fraction": 0.0,
+          "n": 157.0
+        }
+      }
+    },
+    "border=0.200": {
+      "n_samples": 355,
+      "border_score_mean": 0.20000004768371582,
+      "border_score_std": 4.470348358154297e-08,
+      "activation_mean": 0.1293638050556183,
+      "activation_std": 0.024070706218481064,
+      "gradient_mean": 0.001439392101019621,
+      "retention_by_tau": {
+        "0.0": {
+          "R_empirical": 0.0,
+          "R_scale": 0.0,
+          "clip_fraction": 1.0,
+          "n": 355.0
+        },
+        "0.1195138692855835": {
+          "R_empirical": 0.7063624262809753,
+          "R_scale": 0.4816901385784149,
+          "clip_fraction": 0.5183098316192627,
+          "n": 355.0
+        },
+        "0.14921152591705322": {
+          "R_empirical": 0.9701393246650696,
+          "R_scale": 0.7718309760093689,
+          "clip_fraction": 0.2281690090894699,
+          "n": 355.0
+        },
+        "0.17395846545696259": {
+          "R_empirical": 0.971399188041687,
+          "R_scale": 0.9577465057373047,
+          "clip_fraction": 0.0422535203397274,
+          "n": 355.0
+        },
+        "0.17766830325126648": {
+          "R_empirical": 0.9990859627723694,
+          "R_scale": 0.98591548204422,
+          "clip_fraction": 0.014084506779909134,
+          "n": 355.0
+        },
+        "0.18025073409080505": {
+          "R_empirical": 0.9992125630378723,
+          "R_scale": 0.997183084487915,
+          "clip_fraction": 0.002816901309415698,
+          "n": 355.0
+        },
+        "0.18449735641479492": {
+          "R_empirical": 1.0,
+          "R_scale": 1.0,
+          "clip_fraction": 0.0,
+          "n": 355.0
+        },
+        "0.18823611736297607": {
+          "R_empirical": 1.0,
+          "R_scale": 1.0,
+          "clip_fraction": 0.0,
+          "n": 355.0
+        }
+      }
+    },
+    "border=0.600": {
+      "n_samples": 168,
+      "border_score_mean": 0.5999999642372131,
+      "border_score_std": 5.960464477539063e-08,
+      "activation_mean": 0.13109742105007172,
+      "activation_std": 0.02691151201725006,
+      "gradient_mean": 0.000544621201697737,
+      "retention_by_tau": {
+        "0.0": {
+          "R_empirical": 0.0,
+          "R_scale": 0.0,
+          "clip_fraction": 1.0,
+          "n": 168.0
+        },
+        "0.1195138692855835": {
+          "R_empirical": 0.7431153059005737,
+          "R_scale": 0.5,
+          "clip_fraction": 0.5,
+          "n": 168.0
+        },
+        "0.14921152591705322": {
+          "R_empirical": 0.8412644863128662,
+          "R_scale": 0.738095223903656,
+          "clip_fraction": 0.261904776096344,
+          "n": 168.0
+        },
+        "0.17395846545696259": {
+          "R_empirical": 0.8535538911819458,
+          "R_scale": 0.8809523582458496,
+          "clip_fraction": 0.1190476194024086,
+          "n": 168.0
+        },
+        "0.17766830325126648": {
+          "R_empirical": 0.8570988178253174,
+          "R_scale": 0.9464285969734192,
+          "clip_fraction": 0.0535714291036129,
+          "n": 168.0
+        },
+        "0.18025073409080505": {
+          "R_empirical": 0.8857818841934204,
+          "R_scale": 0.9702380895614624,
+          "clip_fraction": 0.02976190485060215,
+          "n": 168.0
+        },
+        "0.18449735641479492": {
+          "R_empirical": 0.8898990750312805,
+          "R_scale": 0.9821428656578064,
+          "clip_fraction": 0.01785714365541935,
+          "n": 168.0
+        },
+        "0.18823611736297607": {
+          "R_empirical": 0.8906907439231873,
+          "R_scale": 0.9940476417541504,
+          "clip_fraction": 0.0059523810632526875,
+          "n": 168.0
+        }
+      }
+    },
+    "border=0.800": {
+      "n_samples": 344,
+      "border_score_mean": 0.7999999523162842,
+      "border_score_std": 5.960464477539063e-08,
+      "activation_mean": 0.13050854206085205,
+      "activation_std": 0.027734052389860153,
+      "gradient_mean": 0.001059204456396401,
+      "retention_by_tau": {
+        "0.0": {
+          "R_empirical": 0.0,
+          "R_scale": 0.0,
+          "clip_fraction": 1.0,
+          "n": 344.0
+        },
+        "0.1195138692855835": {
+          "R_empirical": 0.03376803547143936,
+          "R_scale": 0.5348837375640869,
+          "clip_fraction": 0.4651162922382355,
+          "n": 344.0
+        },
+        "0.14921152591705322": {
+          "R_empirical": 0.9954478144645691,
+          "R_scale": 0.7529069781303406,
+          "clip_fraction": 0.24709302186965942,
+          "n": 344.0
+        },
+        "0.17395846545696259": {
+          "R_empirical": 0.9955141544342041,
+          "R_scale": 0.8081395626068115,
+          "clip_fraction": 0.19186046719551086,
+          "n": 344.0
+        },
+        "0.17766830325126648": {
+          "R_empirical": 0.9984736442565918,
+          "R_scale": 0.8924418687820435,
+          "clip_fraction": 0.10755813866853714,
+          "n": 344.0
+        },
+        "0.18025073409080505": {
+          "R_empirical": 0.9990121126174927,
+          "R_scale": 0.9418604373931885,
+          "clip_fraction": 0.058139536529779434,
+          "n": 344.0
+        },
+        "0.18449735641479492": {
+          "R_empirical": 0.9991827011108398,
+          "R_scale": 0.979651153087616,
+          "clip_fraction": 0.020348837599158287,
+          "n": 344.0
+        },
+        "0.18823611736297607": {
+          "R_empirical": 0.9994332790374756,
+          "R_scale": 0.9883720874786377,
+          "clip_fraction": 0.011627906933426857,
+          "n": 344.0
+        }
+      }
+    }
+  },
+  "monotonicity_at_calibrated_tau": {
+    "tau": 0.18449735641479492,
+    "spearman_border_vs_R_empirical": -0.7378647873726218,
+    "R_empirical_by_group": {
+      "border=0.000": 1.0,
+      "border=0.200": 1.0,
+      "border=0.600": 0.8898990750312805,
+      "border=0.800": 0.9991827011108398
+    },
+    "border_score_mean_by_group": {
+      "border=0.000": 0.0,
+      "border=0.200": 0.20000004768371582,
+      "border=0.600": 0.5999999642372131,
+      "border=0.800": 0.7999999523162842
+    }
+  },
+  "monotonicity_at_median_tau": {
+    "tau": 0.1195138692855835,
+    "spearman_border_vs_R_empirical": -0.19999999999999996,
+    "R_empirical_by_group": {
+      "border=0.000": 0.20905323326587677,
+      "border=0.200": 0.7063624262809753,
+      "border=0.600": 0.7431153059005737,
+      "border=0.800": 0.03376803547143936
+    },
+    "border_score_mean_by_group": {
+      "border=0.000": 0.0,
+      "border=0.200": 0.20000004768371582,
+      "border=0.600": 0.5999999642372131,
+      "border=0.800": 0.7999999523162842
+    }
+  }
+}

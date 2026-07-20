@@ -1,0 +1,52 @@
+seed: 42
+device: cuda
+gpu_id: 3
+output_dir: outputs
+results_dir: results
+task:
+  name: mock_sequence_classification
+  num_labels: 2
+data:
+  dataset_type: mock
+  train_size: 256
+  val_size: 64
+  test_size: 64
+  seq_length: 32
+  num_workers: 0
+model:
+  backbone_type: mock
+  vocab_size: 4
+  hidden_dim: 64
+  num_layers: 2
+adapter:
+  name: germ_bo
+  rank: 4
+  alpha: 8
+  dropout: 0.05
+  target_modules:
+    - classifier
+  compensation_strength: 1.0
+  border_score_type: normalized_border_length
+  border_normalization: mean
+  compensation_clip_min: 0.5
+  compensation_clip_max: 2.0
+optim:
+  lr: 0.001
+  weight_decay: 0.0
+scheduler:
+  name: none
+train:
+  epochs: 3
+  batch_size: 16
+  checkpoint_every: 1
+  log_every: 5
+debug:
+  train_size: 32
+  val_size: 16
+  test_size: 16
+  batch_size: 8
+  epochs: 1
+  max_steps: 4
+  output_subdir: debug_germ_bo
+logging:
+  save_predictions: true

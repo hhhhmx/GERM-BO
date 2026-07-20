@@ -1,0 +1,6 @@
+stage,config,variant,seed,accuracy,f1,loss
+local_refinement,configs/real_dnabert2_germ_bo_hard_border_comp023_stabilize.yaml,comp_0.23,42,0.7656,0.6939,0.5813
+local_refinement,configs/real_dnabert2_germ_bo_hard_border_comp025_stabilize.yaml,comp_0.25,42,0.8906,0.8793,0.3667
+local_refinement,configs/real_dnabert2_germ_bo_hard_border_comp027_stabilize.yaml,comp_0.27,42,0.8828,0.8819,0.3084
+local_refinement,configs/real_dnabert2_germ_bo_hard_border_comp027_stabilize.yaml,comp_0.27,43,0.9063,0.9063,0.4364
+local_refinement,configs/real_dnabert2_germ_bo_hard_border_comp027_stabilize.yaml,comp_0.27,44,0.8359,0.8037,0.4126

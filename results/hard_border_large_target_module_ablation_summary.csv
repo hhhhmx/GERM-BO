@@ -1,0 +1,5 @@
+variant,label,target_modules,seeds,accuracy_mean,accuracy_std,f1_mean,f1_std,threshold_mean,per_seed_accuracy,per_seed_f1
+attn_output_classifier,attention.output + classifier,layer0/1 attention.output.dense + classifier,42/43/44,0.893229,0.039900,0.893534,0.036855,0.369282,0.9102 / 0.9219 / 0.8477,0.9076 / 0.9213 / 0.8517
+wqkv_classifier,Wqkv + classifier,layer0/1 Wqkv + classifier,42/43/44,0.885417,0.019661,0.888111,0.015510,0.509232,0.8672 / 0.8828 / 0.9063,0.8741 / 0.8855 / 0.9048
+classifier_only,Classifier only,classifier,42/43/44,0.873698,0.009831,0.873458,0.014888,0.434035,0.8750 / 0.8828 / 0.8633,0.8740 / 0.8881 / 0.8583
+full_wqkv_attn_output_classifier,Wqkv + attention.output + classifier,layer0/1 Wqkv + layer0/1 attention.output.dense + classifier,42/43/44,0.861979,0.014789,0.860032,0.008117,0.458434,0.8555 / 0.8516 / 0.8789,0.8538 / 0.8571 / 0.8692

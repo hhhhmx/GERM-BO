@@ -1,0 +1,5 @@
+benchmark,method,label,family,n_seeds,test_accuracy_mean,test_accuracy_std,test_macro_f1_mean,test_macro_f1_std,per_seed_accuracy,per_seed_macro_f1
+splice_sites_all_larger,kmer_logreg,3-mer Logistic Regression,traditional_kmer,5,0.4094444394111633,0.0023240563812644854,0.4052459526981832,0.0023225063967228688,0.4128 / 0.4083 / 0.4089 / 0.4106 / 0.4067,0.4085 / 0.4045 / 0.4045 / 0.4063 / 0.4023
+splice_sites_all_larger,kmer_linear_svm,3-mer Linear SVM,traditional_kmer,5,0.4136666715145111,0.0025640010279910645,0.4128073952807864,0.00263780059268515,0.4172 / 0.4139 / 0.4133 / 0.4139 / 0.4100,0.4164 / 0.4131 / 0.4126 / 0.4130 / 0.4090
+splice_sites_all_larger,kmer_multinomial_nb,3-mer Multinomial NB,traditional_kmer,5,0.4033333361148834,0.0,0.39938168509229,0.0,0.4033 / 0.4033 / 0.4033 / 0.4033 / 0.4033,0.3994 / 0.3994 / 0.3994 / 0.3994 / 0.3994
+splice_sites_all_larger,kmer_nearest_centroid,3-mer Nearest Centroid,traditional_kmer,5,0.4033333361148834,0.0,0.3993757677239231,0.0,0.4033 / 0.4033 / 0.4033 / 0.4033 / 0.4033,0.3994 / 0.3994 / 0.3994 / 0.3994 / 0.3994

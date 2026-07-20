@@ -1,0 +1,11 @@
+benchmark,method,label,seed,val_accuracy,val_macro_f1,test_accuracy,test_macro_f1
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,50,0.385,0.3160541053602332,0.38433333333333336,0.32090739135813573
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,51,0.3388888888888889,0.18829282814769147,0.33766666666666667,0.19093822571834615
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,52,0.3988888888888889,0.36342330184435445,0.38166666666666665,0.34451356288671636
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,53,0.3655555555555556,0.2738569274072022,0.37766666666666665,0.29795496841581454
+splice_sites_all_larger,lora_attention_output_classifier,LoRA attention.output + classifier,54,0.3372222222222222,0.2857960935635533,0.33666666666666667,0.2848034306419868
+splice_sites_all_larger,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",50,0.4088888888888889,0.3567343116312189,0.406,0.3569296896080023
+splice_sites_all_larger,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",51,0.4255555555555556,0.4082303643076721,0.42433333333333334,0.41097333645713546
+splice_sites_all_larger,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",52,0.4061111111111111,0.3349187180168209,0.399,0.326104321990594
+splice_sites_all_larger,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",53,0.4261111111111111,0.4037457935430651,0.4136666666666667,0.3921322682265079
+splice_sites_all_larger,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",54,0.355,0.30895258706756423,0.357,0.31568800154472093

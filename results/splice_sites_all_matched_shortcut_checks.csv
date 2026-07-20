@@ -1,0 +1,13 @@
+split_id,split_label,method,label,n_seeds,test_accuracy_mean,test_accuracy_std,test_macro_f1_mean,test_macro_f1_std
+gc_matched,GC-matched split,kmer_linear_svm,3-mer Linear SVM,5,0.4269999980926514,0.0033471978819060453,0.426071589652168,0.003285605692341398
+kmer_balanced,3-mer-balanced split,kmer_linear_svm,3-mer Linear SVM,5,0.4136666715145111,0.0025640010279910645,0.4128073952807864,0.00263780059268515
+original_larger,Original larger split,kmer_linear_svm,3-mer Linear SVM,5,0.42573333978652955,0.0019493582329758055,0.425913213546535,0.0019144352341597534
+gc_matched,GC-matched split,kmer_logreg,3-mer Logistic Regression,5,0.4295555531978607,0.0026469171717744314,0.42493689421943115,0.0026052860972339744
+kmer_balanced,3-mer-balanced split,kmer_logreg,3-mer Logistic Regression,5,0.4094444394111633,0.0023240563812644854,0.4052459526981832,0.0023225063967228688
+original_larger,Original larger split,kmer_logreg,3-mer Logistic Regression,5,0.43179999589920043,0.0007673903598799503,0.4293047904087451,0.0007560138277800303
+gc_matched,GC-matched split,kmer_multinomial_nb,3-mer Multinomial NB,5,0.40888887643814087,0.0,0.40702514763386227,0.0
+kmer_balanced,3-mer-balanced split,kmer_multinomial_nb,3-mer Multinomial NB,5,0.4033333361148834,0.0,0.39938168509229,0.0
+original_larger,Original larger split,kmer_multinomial_nb,3-mer Multinomial NB,5,0.3866666555404663,0.0,0.35397444722247956,0.0
+gc_matched,GC-matched split,kmer_nearest_centroid,3-mer Nearest Centroid,5,0.4072222113609314,0.0,0.4051523845742036,0.0
+kmer_balanced,3-mer-balanced split,kmer_nearest_centroid,3-mer Nearest Centroid,5,0.4033333361148834,0.0,0.3993757677239231,0.0
+original_larger,Original larger split,kmer_nearest_centroid,3-mer Nearest Centroid,5,0.3863333463668823,0.0,0.365155669876887,0.0

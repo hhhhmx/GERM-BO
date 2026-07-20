@@ -1,0 +1,89 @@
+{
+  "config": "configs/real_dnabert2_gated_lora_splice_sites_all_kmer_balanced.yaml",
+  "checkpoint": "outputs/splice_kmer_balanced_direction_gated_lora_seed52/checkpoints/best.pt",
+  "evaluation": "argmax",
+  "validation": {
+    "accuracy": 0.3638888888888889,
+    "macro_f1": 0.2998237558867241,
+    "per_class": {
+      "0": {
+        "precision": 0.4199029126213592,
+        "recall": 0.28833333333333333,
+        "f1": 0.34189723320158105,
+        "support": 600,
+        "predicted": 412
+      },
+      "1": {
+        "precision": 0.30337078651685395,
+        "recall": 0.045,
+        "f1": 0.0783744557329463,
+        "support": 600,
+        "predicted": 89
+      },
+      "2": {
+        "precision": 0.35026943802925325,
+        "recall": 0.7583333333333333,
+        "f1": 0.479199578725645,
+        "support": 600,
+        "predicted": 1299
+      }
+    },
+    "true_label_counts": {
+      "0": 600,
+      "1": 600,
+      "2": 600
+    },
+    "predicted_label_counts": {
+      "0": 412,
+      "1": 89,
+      "2": 1299
+    }
+  },
+  "test": {
+    "accuracy": 0.37333333333333335,
+    "macro_f1": 0.31190402805403944,
+    "per_class": {
+      "0": {
+        "precision": 0.4416243654822335,
+        "recall": 0.29,
+        "f1": 0.3501006036217304,
+        "support": 600,
+        "predicted": 394
+      },
+      "1": {
+        "precision": 0.35714285714285715,
+        "recall": 0.058333333333333334,
+        "f1": 0.1002865329512894,
+        "support": 600,
+        "predicted": 98
+      },
+      "2": {
+        "precision": 0.35397553516819574,
+        "recall": 0.7716666666666666,
+        "f1": 0.4853249475890985,
+        "support": 600,
+        "predicted": 1308
+      }
+    },
+    "true_label_counts": {
+      "0": 600,
+      "1": 600,
+      "2": 600
+    },
+    "predicted_label_counts": {
+      "0": 394,
+      "1": 98,
+      "2": 1308
+    }
+  },
+  "device_report": {
+    "torch_version": "2.5.1+cu124",
+    "cuda_visible_devices": "3",
+    "cuda_available": true,
+    "visible_gpu_count": 1,
+    "selected_device": "cuda:0",
+    "selected_gpu_name": "NVIDIA H20",
+    "memory_allocated_mb": 446.72,
+    "memory_reserved_mb": 490.0
+  }
+}

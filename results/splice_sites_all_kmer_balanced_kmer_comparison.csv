@@ -1,0 +1,21 @@
+benchmark,method,label,family,seed,val_accuracy,val_macro_f1,test_accuracy,test_macro_f1
+splice_sites_all_larger,kmer_logreg,3-mer Logistic Regression,traditional_kmer,45,0.3933333456516266,0.3894827224236348,0.41277778148651123,0.40854605325092086
+splice_sites_all_larger,kmer_linear_svm,3-mer Linear SVM,traditional_kmer,45,0.4005555510520935,0.4002619730716763,0.4172222316265106,0.4164072081759851
+splice_sites_all_larger,kmer_multinomial_nb,3-mer Multinomial NB,traditional_kmer,45,0.3844444453716278,0.3788991020317689,0.4033333361148834,0.39938168509229
+splice_sites_all_larger,kmer_nearest_centroid,3-mer Nearest Centroid,traditional_kmer,45,0.38055557012557983,0.37474803562785275,0.4033333361148834,0.3993757677239231
+splice_sites_all_larger,kmer_logreg,3-mer Logistic Regression,traditional_kmer,46,0.3888888955116272,0.38537706963923785,0.40833333134651184,0.40453424214084927
+splice_sites_all_larger,kmer_linear_svm,3-mer Linear SVM,traditional_kmer,46,0.39944443106651306,0.3991991289621037,0.4138889014720917,0.41305432867099995
+splice_sites_all_larger,kmer_multinomial_nb,3-mer Multinomial NB,traditional_kmer,46,0.3844444453716278,0.3788991020317689,0.4033333361148834,0.39938168509229
+splice_sites_all_larger,kmer_nearest_centroid,3-mer Nearest Centroid,traditional_kmer,46,0.38055557012557983,0.37474803562785275,0.4033333361148834,0.3993757677239231
+splice_sites_all_larger,kmer_logreg,3-mer Logistic Regression,traditional_kmer,47,0.39500001072883606,0.3916603220141375,0.40888887643814087,0.40451778628662954
+splice_sites_all_larger,kmer_linear_svm,3-mer Linear SVM,traditional_kmer,47,0.39444443583488464,0.39397857056048835,0.41333332657814026,0.412581034574824
+splice_sites_all_larger,kmer_multinomial_nb,3-mer Multinomial NB,traditional_kmer,47,0.3844444453716278,0.3788991020317689,0.4033333361148834,0.39938168509229
+splice_sites_all_larger,kmer_nearest_centroid,3-mer Nearest Centroid,traditional_kmer,47,0.38055557012557983,0.37474803562785275,0.4033333361148834,0.3993757677239231
+splice_sites_all_larger,kmer_logreg,3-mer Logistic Regression,traditional_kmer,48,0.3938888907432556,0.39020811164055114,0.41055554151535034,0.40630562808857235
+splice_sites_all_larger,kmer_linear_svm,3-mer Linear SVM,traditional_kmer,48,0.39944443106651306,0.3989723896261194,0.4138889014720917,0.41302297442371977
+splice_sites_all_larger,kmer_multinomial_nb,3-mer Multinomial NB,traditional_kmer,48,0.3844444453716278,0.3788991020317689,0.4033333361148834,0.39938168509229
+splice_sites_all_larger,kmer_nearest_centroid,3-mer Nearest Centroid,traditional_kmer,48,0.38055557012557983,0.37474803562785275,0.4033333361148834,0.3993757677239231
+splice_sites_all_larger,kmer_logreg,3-mer Logistic Regression,traditional_kmer,49,0.38999998569488525,0.3865391164373877,0.40666666626930237,0.402326053723944
+splice_sites_all_larger,kmer_linear_svm,3-mer Linear SVM,traditional_kmer,49,0.4011111259460449,0.4008202106302223,0.4099999964237213,0.4089714305584033
+splice_sites_all_larger,kmer_multinomial_nb,3-mer Multinomial NB,traditional_kmer,49,0.3844444453716278,0.3788991020317689,0.4033333361148834,0.39938168509229
+splice_sites_all_larger,kmer_nearest_centroid,3-mer Nearest Centroid,traditional_kmer,49,0.38055557012557983,0.37474803562785275,0.4033333361148834,0.3993757677239231

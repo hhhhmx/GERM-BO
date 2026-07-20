@@ -1,0 +1,8 @@
+suite,dataset,task_family,method,variant,compensation_strength,target_scope,accuracy,f1,loss
+robustness,split_large_primary,primary,baseline_lora,default,,attn2_plus_classifier,0.5000,0.6667,0.6933
+robustness,split_large_primary,primary,germ_bo,mild_default,0.3,attn2_plus_classifier,0.8203,0.7850,0.5588
+robustness,split_hard_border,hard_border,baseline_lora,default,,attn2_plus_classifier,0.5000,0.6667,0.6940
+robustness,split_hard_border,hard_border,germ_bo,mild_default,0.3,attn2_plus_classifier,0.5078,0.1370,0.7551
+robustness,split_hard_border,hard_border,germ_bo,lowcomp,0.2,attn2_plus_classifier,0.8984,0.8926,0.5179
+robustness,split_hard_border,hard_border,germ_bo,highcomp,0.4,attn2_plus_classifier,0.5000,0.0000,0.6932
+robustness,split_hard_border,hard_border,germ_bo,mlp_expanded,0.3,attn2_mlp2_plus_classifier,0.5000,0.6667,0.6990

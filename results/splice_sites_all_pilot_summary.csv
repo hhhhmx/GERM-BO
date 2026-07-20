@@ -1,0 +1,3 @@
+benchmark,method,label,n_seeds,test_accuracy_mean,test_accuracy_std,test_f1_mean,test_f1_std,per_seed_accuracy
+splice_sites_all,baseline_lora,Baseline LoRA,3,0.3597222222222222,0.024471260543596704,0.24806063120580413,0.07051224373184069,0.3642 / 0.3333 / 0.3817
+splice_sites_all,germ_bo_center_jsd,Metadata-estimated GERM-BO center-JSD,3,0.3975,0.0044095855184410025,0.3467499534187192,0.0252406213230883,0.3958 / 0.3942 / 0.4025

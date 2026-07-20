@@ -1,0 +1,7 @@
+method,label,class_label,precision_mean,recall_mean,f1_mean,predicted_mean,support_mean
+lora_attention_output_classifier,LoRA attention.output + classifier,0,0.495917976406857,0.08566666666666667,0.12975205568595355,140.8,600.0
+lora_attention_output_classifier,LoRA attention.output + classifier,1,0.4190413059163059,0.05566666666666666,0.09338789403465278,79.6,600.0
+lora_attention_output_classifier,LoRA attention.output + classifier,2,0.3438740180243366,0.9053333333333333,0.49822878129053694,1579.6,600.0
+germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",0,0.3715454548875891,0.504,0.40383564954673534,823.2,600.0
+germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",1,0.33984043014172693,0.22066666666666665,0.24437705728458908,371.0,600.0
+germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",2,0.4554325851218507,0.4416666666666667,0.42586265735390005,605.8,600.0

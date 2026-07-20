@@ -1,0 +1,89 @@
+{
+  "config": "configs/real_dnabert2_linear_probe_splice_sites_all_larger.yaml",
+  "checkpoint": "outputs/splice_sites_all_larger_linear_probe_seed45/checkpoints/best.pt",
+  "evaluation": "argmax",
+  "validation": {
+    "accuracy": 0.3472222222222222,
+    "macro_f1": 0.21440655828953245,
+    "per_class": {
+      "0": {
+        "precision": 0.34185493460166466,
+        "recall": 0.9583333333333334,
+        "f1": 0.5039439088518842,
+        "support": 600,
+        "predicted": 1682
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 600,
+        "predicted": 0
+      },
+      "2": {
+        "precision": 0.423728813559322,
+        "recall": 0.08333333333333333,
+        "f1": 0.13927576601671307,
+        "support": 600,
+        "predicted": 118
+      }
+    },
+    "true_label_counts": {
+      "0": 600,
+      "1": 600,
+      "2": 600
+    },
+    "predicted_label_counts": {
+      "0": 1682,
+      "1": 0,
+      "2": 118
+    }
+  },
+  "test": {
+    "accuracy": 0.34933333333333333,
+    "macro_f1": 0.21811895559143468,
+    "per_class": {
+      "0": {
+        "precision": 0.34398563734290843,
+        "recall": 0.958,
+        "f1": 0.5062087186261559,
+        "support": 1000,
+        "predicted": 2785
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1000,
+        "predicted": 0
+      },
+      "2": {
+        "precision": 0.4186046511627907,
+        "recall": 0.09,
+        "f1": 0.14814814814814814,
+        "support": 1000,
+        "predicted": 215
+      }
+    },
+    "true_label_counts": {
+      "0": 1000,
+      "1": 1000,
+      "2": 1000
+    },
+    "predicted_label_counts": {
+      "0": 2785,
+      "1": 0,
+      "2": 215
+    }
+  },
+  "device_report": {
+    "torch_version": "2.5.1+cu124",
+    "cuda_visible_devices": "3",
+    "cuda_available": true,
+    "visible_gpu_count": 1,
+    "selected_device": "cuda:0",
+    "selected_gpu_name": "NVIDIA H20",
+    "memory_allocated_mb": 446.59,
+    "memory_reserved_mb": 490.0
+  }
+}

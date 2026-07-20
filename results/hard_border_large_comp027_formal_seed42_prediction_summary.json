@@ -1,0 +1,23 @@
+{
+  "split": "test",
+  "num_examples": 256,
+  "predicted_label_counts": {
+    "1": 256
+  },
+  "true_label_counts": {
+    "0": 128,
+    "1": 128
+  },
+  "device_report": {
+    "torch_version": "2.5.1+cu124",
+    "cuda_visible_devices": "3",
+    "cuda_available": true,
+    "visible_gpu_count": 1,
+    "selected_device": "cuda:0",
+    "selected_gpu_name": "NVIDIA H20",
+    "memory_allocated_mb": 446.9,
+    "memory_reserved_mb": 490.0
+  },
+  "checkpoint": "outputs/hard_border_large_comp027_formal_seed42/checkpoints/debug_last.pt",
+  "config": "configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml"
+}

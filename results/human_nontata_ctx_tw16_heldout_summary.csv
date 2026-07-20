@@ -1,0 +1,3 @@
+method,label,n_seeds,test_accuracy_mean,test_accuracy_std,test_f1_mean,test_f1_std,per_seed_accuracy
+baseline_lora,Baseline LoRA,5,0.8178,0.003420526275297417,0.8360321737507026,0.005462489112284646,0.8220 / 0.8150 / 0.8160 / 0.8150 / 0.8210
+ctx_tw16_t10_s015,Contextual DNABERT-2 shift ctx_tw16_t10_s015,5,0.8136,0.006426507605223798,0.8299392314255538,0.007076414661701246,0.8090 / 0.8220 / 0.8190 / 0.8100 / 0.8080

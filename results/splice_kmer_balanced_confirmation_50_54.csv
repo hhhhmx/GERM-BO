@@ -1,0 +1,11 @@
+benchmark,method,label,seed,val_accuracy,val_macro_f1,test_accuracy,test_macro_f1
+splice_sites_all_kmer_balanced,lora_attention_output_classifier,LoRA attention.output + classifier,50,0.3638888888888889,0.27510015368505686,0.3383333333333333,0.25025239374322855
+splice_sites_all_kmer_balanced,lora_attention_output_classifier,LoRA attention.output + classifier,51,0.3516666666666667,0.2297855724975391,0.35333333333333333,0.23530970411454044
+splice_sites_all_kmer_balanced,lora_attention_output_classifier,LoRA attention.output + classifier,52,0.35333333333333333,0.25028975181972773,0.35388888888888886,0.25744227448766915
+splice_sites_all_kmer_balanced,lora_attention_output_classifier,LoRA attention.output + classifier,53,0.35388888888888886,0.23434465776909963,0.3422222222222222,0.2197476647974322
+splice_sites_all_kmer_balanced,lora_attention_output_classifier,LoRA attention.output + classifier,54,0.34833333333333333,0.22617341829525053,0.3566666666666667,0.2395291812090351
+splice_sites_all_kmer_balanced,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",50,0.3611111111111111,0.2670315883374921,0.3605555555555556,0.2670734458425223
+splice_sites_all_kmer_balanced,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",51,0.4127777777777778,0.38503891494679704,0.41888888888888887,0.38947968716343623
+splice_sites_all_kmer_balanced,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",52,0.3794444444444444,0.34706456683757486,0.37277777777777776,0.3468825683599536
+splice_sites_all_kmer_balanced,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",53,0.39944444444444444,0.4013629763843432,0.3883333333333333,0.3900905571725783
+splice_sites_all_kmer_balanced,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",54,0.4166666666666667,0.4112914568836687,0.4033333333333333,0.396599348436884

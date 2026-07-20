@@ -1,0 +1,4 @@
+config,split,seed,accuracy,f1,loss
+configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,data/splits_hard_border_large,42,0.5000,0.6667,0.6933
+configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,data/splits_hard_border_large,43,0.9805,0.9802,0.0623
+configs/real_dnabert2_germ_bo_hard_border_large_comp027_formal.yaml,data/splits_hard_border_large,44,0.9102,0.9076,0.2632

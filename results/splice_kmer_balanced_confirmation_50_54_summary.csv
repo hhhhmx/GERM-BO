@@ -1,0 +1,3 @@
+benchmark,method,label,n_seeds,test_accuracy_mean,test_accuracy_std,test_macro_f1_mean,test_macro_f1_std,per_seed_accuracy,per_seed_macro_f1
+splice_sites_all_kmer_balanced,lora_attention_output_classifier,LoRA attention.output + classifier,5,0.34888888888888886,0.008079466429027224,0.2404562436703811,0.014497252776990396,0.3383 / 0.3533 / 0.3539 / 0.3422 / 0.3567,0.2503 / 0.2353 / 0.2574 / 0.2197 / 0.2395
+splice_sites_all_kmer_balanced,germ_bo_quantile_q08_12_comp027,"GERM-BO quantile [0.8,1.2] comp0.27",5,0.3887777777777778,0.023298254054227068,0.35802512139507486,0.054547952860551245,0.3606 / 0.4189 / 0.3728 / 0.3883 / 0.4033,0.2671 / 0.3895 / 0.3469 / 0.3901 / 0.3966

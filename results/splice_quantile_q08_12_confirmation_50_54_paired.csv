@@ -1,0 +1,3 @@
+comparison,metric,mean_delta,delta_std,bootstrap_ci95_low,bootstrap_ci95_high,win_rate,per_seed_delta
+germ_bo_quantile_q08_12_comp027_minus_lora_attention_output_classifier,test_accuracy,0.03640000000000001,0.02900708725658457,0.019400000000000008,0.06266666666666668,1.0,+0.0217 / +0.0867 / +0.0173 / +0.0360 / +0.0203
+germ_bo_quantile_q08_12_comp027_minus_lora_attention_output_classifier,test_macro_f1,0.0725420077611922,0.09160166776423884,0.012194591652618025,0.1471746782261878,0.8,+0.0360 / +0.2200 / -0.0184 / +0.0942 / +0.0309
