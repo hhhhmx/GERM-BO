@@ -1,25 +1,27 @@
 {
   "title": "GERM-BO: a reproducible border-aware adapter framework for genomic foundation models",
   "upload_type": "software",
-  "description": "Code, processed data splits, configuration files, archived result summaries, manuscript files, and reproduction entry points for GERM-BO, a border-aware adapter framework for genomic foundation model adaptation.",
+  "description": "Code, processed data splits, configuration files, archived result summaries, manuscript files, and reproduction entry points for GERM-BO, a border-aware adapter framework for genomic foundation model adaptation. Submitted as an Original Paper to Bioinformatics (Oxford University Press).",
   "creators": [
     {
       "name": "Huang, Mingxuan",
-      "affiliation": "Zhongshan School of Medicine, Sun Yat-sen University"
+      "affiliation": "Zhongshan School of Medicine, Sun Yat-sen University",
+      "orcid": "0009-0005-3428-2119"
     },
     {
-      "name": "Wang, Jingchao"
-    },
-    {
-      "name": "Shi, Yang"
+      "name": "Wang, Jingchao",
+      "affiliation": "School of Computer Science, Peking University",
+      "orcid": "0000-0002-0099-539X"
     },
     {
       "name": "Yang, Miyang",
-      "affiliation": "Zhongshan School of Medicine, Sun Yat-sen University"
+      "affiliation": "Zhongshan School of Medicine, Sun Yat-sen University",
+      "orcid": "0009-0006-7347-8920"
     },
     {
       "name": "Wang, Zhaochu",
-      "affiliation": "Department of Anorectal Surgery, The Affiliated People's Hospital of Fujian University of Traditional Chinese Medicine"
+      "affiliation": "Department of Anorectal Surgery, The Affiliated People's Hospital of Fujian University of Traditional Chinese Medicine",
+      "orcid": "0009-0003-9091-6476"
     },
     {
       "name": "Chen, Dayou",
@@ -36,8 +38,10 @@
     "LoRA",
     "DNA word overlap",
     "outlier suppression",
-    "computational genomics"
+    "computational genomics",
+    "Bioinformatics"
   ],
+  "license": "mit",
   "related_identifiers": [
     {
       "identifier": "https://github.com/hhhhmx/GERM-BO",

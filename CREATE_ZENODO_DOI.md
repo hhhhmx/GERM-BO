@@ -1,40 +1,43 @@
 # Creating a Zenodo DOI from GitHub
 
-Use this workflow after the GitHub repository is ready.
+Required for *Bioinformatics* software availability: archive the submitted version at Zenodo (or Figshare / Software Heritage) and put the DOI in the manuscript Availability section **before or at submission**.
 
 ## One-time Zenodo setup
 
-1. Sign in to Zenodo with GitHub.
-2. Open the Zenodo GitHub integration page: https://zenodo.org/account/settings/github/
-3. Find `hhhhmx/GERM-BO`.
-4. Turn on archiving for the repository.
+1. Sign in to Zenodo with GitHub: https://zenodo.org
+2. Open GitHub integration: https://zenodo.org/account/settings/github/
+3. Find `hhhhmx/GERM-BO` and **enable** archiving.
+4. Confirm the repository is **public** and contains `LICENSE` (MIT) and `.zenodo.json`.
 
 ## Create the archived release
 
-1. Go to the GitHub repository: https://github.com/hhhhmx/GERM-BO
-2. Open `Releases`.
-3. Select `Draft a new release`.
-4. Use a tag such as `v0.1.0-review`.
-5. Use a title such as `GERM-BO reviewer package v0.1.0`.
-6. In the release notes, write:
+1. Go to https://github.com/hhhhmx/GERM-BO/releases
+2. Draft a new release with tag `v0.1.0-bioinformatics` (or the tag created by the submission prep script).
+3. Title: `GERM-BO Bioinformatics submission package v0.1.0`
+4. Release notes example:
 
 ```text
-Reviewer package for the Cell Reports Methods submission.
+Reviewer/submission package for the Bioinformatics Original Paper.
 
-This release contains code, processed data splits, configuration files,
-archived result summaries, manuscript files, and reproduction entry points.
+Contains code, processed data splits, configuration files,
+archived result summaries, manuscript materials, and reproduction entry points.
+License: MIT.
 ```
 
-7. Publish the release.
-8. Wait for Zenodo to archive the release.
-9. Copy the Zenodo DOI URL.
+5. Publish the release.
+6. Wait for Zenodo to create the record (often a few minutes).
+7. Copy the Concept DOI or Version DOI (prefer the version DOI for the submitted snapshot).
 
 ## After Zenodo creates the DOI
 
-Replace the pending Zenodo DOI note in:
+1. Replace the Zenodo URL placeholder in:
+   - `latex/bioinformatics/main.tex` (Availability and Implementation)
+   - `README.md`
+   - `CITATION.cff` (`doi:` field, optional)
+2. Rebuild `latex/bioinformatics/main.pdf`.
+3. Optionally publish a tiny follow-up commit that only updates the DOI string.
 
-- `manuscript/main.tex`
-- `README.md`
-- the working manuscript at `cell-press-latex-template/main.tex`
+## Fallback archive
 
-Then rebuild the manuscript PDF and push one final GitHub release if needed.
+If Zenodo GitHub integration is delayed, request a Software Heritage save of
+`https://github.com/hhhhmx/GERM-BO` and temporarily cite the SWHID, then switch to the Zenodo DOI once available.

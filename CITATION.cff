@@ -5,16 +5,19 @@ type: software
 authors:
   - family-names: Huang
     given-names: Mingxuan
+    orcid: "https://orcid.org/0009-0005-3428-2119"
     affiliation: "Zhongshan School of Medicine, Sun Yat-sen University"
   - family-names: Wang
     given-names: Jingchao
-  - family-names: Shi
-    given-names: Yang
+    orcid: "https://orcid.org/0000-0002-0099-539X"
+    affiliation: "School of Computer Science, Peking University"
   - family-names: Yang
     given-names: Miyang
+    orcid: "https://orcid.org/0009-0006-7347-8920"
     affiliation: "Zhongshan School of Medicine, Sun Yat-sen University"
   - family-names: Wang
     given-names: Zhaochu
+    orcid: "https://orcid.org/0009-0003-9091-6476"
     affiliation: "Department of Anorectal Surgery, The Affiliated People's Hospital of Fujian University of Traditional Chinese Medicine"
   - family-names: Chen
     given-names: Dayou
@@ -23,7 +26,8 @@ authors:
     given-names: Xi
     affiliation: "Zhongshan School of Medicine, Sun Yat-sen University"
 repository-code: "https://github.com/hhhhmx/GERM-BO"
-abstract: "GERM-BO is a border-aware adapter framework for resource-efficient genomic foundation model adaptation. This repository contains code, processed data splits, configuration files, result summaries, manuscript files, and reproduction entry points."
+license: MIT
+abstract: "GERM-BO is a border-aware adapter framework for resource-efficient genomic foundation model adaptation. This repository contains code, processed data splits, configuration files, result summaries, manuscript files, and reproduction entry points for the Bioinformatics Original Paper submission."
 keywords:
   - genomic foundation models
   - parameter-efficient adaptation
